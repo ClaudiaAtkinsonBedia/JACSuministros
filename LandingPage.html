@@ -1,16 +1,180 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> J.A.C. Suministros </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> J.A.C. Suministros </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <!-- HEADER -->
+  <header>
+
+    <!-- BARRA SUPERIOR -->
+    <div class="container">
+      <div class="row">
+        <div class="col-6"> <!-- Icono + link -->
+          <i class="bi bi-envelope-fill"></i> <!-- Icono -->
+          <a href="mailto:info@jacsuministros.es"> info@jacsuministros.es </a> <!-- link email -->
+        </div>
+        <div class="col-6"> <!-- Icono + link -->
+          <i class="bi bi-telephone-fill"></i> <!-- Icono -->
+          <a href="tel:921413272"> 921 41 32 72 </a> <!-- link teléfono -->
+        </div>
+      </div>
+    </div>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Categorías
+              </a>
+              <ul class="dropdown-menu"> <!-- Lista de categorías -->
+                <li><a class="dropdown-item" href="#"> Categoría 1 </a></li>
+                <li><a class="dropdown-item" href="#"> Categoría 2 </a></li>
+                <li><a class="dropdown-item" href="#"> Categoría 3 </a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"> ¿Quiénes somos? </a>
+            </li>
+            <li>
+              <img src="img/logo.png" alt="Bootstrap" width="40" height="34"> <!-- Logo -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> Contacto </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> Blog </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div> <!-- Entrar en cuenta y cambiar idioma -->
+            <i class="bi bi-person-circle"></i> <!-- Icono -->
+            <a href="#"> Tu cuenta </a> <!-- link tu cuenta -->
+          </div>
+          <div> <!-- Icono + link -->
+            <i class="bi bi-globe-americas"></i> <!-- Icono -->
+            <a href="#"> Idioma </a> <!-- link idioma -->
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <p> <!-- Texto llamativo -->
+      J.A.C SUMINISTROS INDUSTRIALES S.L., empresa fundada en 2002, formada por un grupo de profesionales con más de 40
+      años de experiencia en el sector,
+      por ello tratamos de crecer cada día y así mejorar nuestra relación con nuestros clientes, elemento fundamental
+      para su mayor satisfacción.
+
+      Esperamos aquí poder ayudarles en lo posible, estando siempre a su disposición en nuestra zona de contacto.
+    </p>
+    <div class="container">
+      <div class="row justify-content-end">
+        <div class="col-auto">
+          <a class="btn btn-warning" href="tel:921413272" role="button"> Llámanos </a>
+          <!-- Botón - Llamada a la acción -->
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <!-- ELEMENTOS EXTERNOS AL FOOTER -->
+    <h2> ¿Dónde estamos?</h2>
+    <p> Desde aquí puedes navegar hacia nuestra tienda de Segovia </p>
+
+    <!-- Mapa -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3013.8642233620435!2d-4.117698851244805!3d40.9406428499813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDDCsDU2JzI2LjMiTiA0wrAwNic0Ni4yIlc!5e0!3m2!1ses!2ses!4v1713434363637!5m2!1ses!2ses"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <!-- Barra de Kit Digital -->
+
+    <p> AQUÍ VA LA BARRA DEL KIT DIGITAL </p>
+
+    <!-- ELEMENTOS INTERNOS AL FOOTER -->
+
+ <!-- Mapa del sitio -->
+    <div class="row">
+      <div class="col">
+        <h6> MAPA DEL SITIO </h6>
+        <ul>
+          <li> Home </li>
+          <li> ¿Quiénes somos? </li>
+          <li> Categorías </li>
+          <li> Contacto </li>
+          <li> Blog </li>
+          <li> Tu cuenta </li>
+        </ul>
+      </div>
+      <!-- Aviso legal -->
+      <div class="col">
+        <h6> INFORMACIÓN </h6>
+        <ul>
+          <li> Aviso Legal </li>
+          <li> Política de Cookies </li>
+          <li> Política de Privacidad </li>
+        </ul>
+      </div>
+
+      <!-- Contacto -->
+      <div class="col">
+        <h6>Contacto</h6>
+        <ul>
+          <li>
+            Dirección:
+            J.A.C Suministros Industriales S.L.
+            Avda de la Constitucion 11
+            40005 Segovia
+          </li>
+          <li>
+            Teléfono:
+            921 413 272
+          </li>
+          <li>
+            Fax:
+            921 413 271
+          </li>
+          <li>
+            Correo:
+            <a href="mailto:info@jacsuministros.es"> info@jacsuministros.es </a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
