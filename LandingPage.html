@@ -8,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -19,19 +20,21 @@
     <div class="container">
       <div class="row">
         <div class="col-6"> <!-- Icono + link -->
-          <i class="bi bi-envelope-fill"></i> <!-- Icono -->
-          <a href="mailto:info@jacsuministros.es"> info@jacsuministros.es </a> <!-- link email -->
+          <a href="mailto:info@jacsuministros.es"> <!-- link email -->
+            <i class="bi bi-envelope-fill"></i> <!-- Icono -->
+             info@jacsuministros.es </a> 
         </div>
-        <div class="col-6"> <!-- Icono + link -->
-          <i class="bi bi-telephone-fill"></i> <!-- Icono -->
-          <a href="tel:921413272"> 921 41 32 72 </a> <!-- link teléfono -->
+        <div class="col-6 text-end"> <!-- Icono + link -->
+          <a href="tel:921413272"> <!-- link teléfono -->
+            <i class="bi bi-telephone-fill"></i> <!-- Icono -->
+            921 41 32 72 </a> 
         </div>
       </div>
     </div>
 
     <!-- BARRA DE NAVEGACIÓN -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary uwu">
+      <div class="container-fluid uwu">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <i class="bi bi-list"></i>
@@ -64,9 +67,9 @@
           </ul>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div> <!-- Entrar en cuenta y cambiar idioma -->
+      <div class="container uwu">
+        <div class="row uwu ">
+          <div class=""> <!-- Entrar en cuenta y cambiar idioma -->
             <i class="bi bi-person-circle"></i> <!-- Icono -->
             <a href="#"> Tu cuenta </a> <!-- link tu cuenta -->
           </div>
@@ -105,7 +108,7 @@
   <footer>
 
     <!-- ELEMENTOS EXTERNOS AL FOOTER -->
-    <h2> ¿Dónde estamos?</h2>
+    <h2 id="ubicacion"> ¿Dónde estamos?</h2>
     <p> Desde aquí puedes navegar hacia nuestra tienda de Segovia </p>
 
     <!-- Mapa -->
@@ -148,10 +151,12 @@
         <h6>Contacto</h6>
         <ul>
           <li>
-            Dirección:
-            J.A.C Suministros Industriales S.L.
-            Avda de la Constitucion 11
-            40005 Segovia
+            <a href="#ubicacion">
+              Dirección:
+              J.A.C. Suministros Industriales S.L.
+              Avda de la Constitucion 11
+              40005 Segovia
+            </a>
           </li>
           <li>
             Teléfono:
