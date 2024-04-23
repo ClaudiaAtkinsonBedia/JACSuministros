@@ -7,7 +7,7 @@ function inicio() {
 
     // BOTÓN E INPUTS
 
-    let boton = document.getElementById("botonSubmit"); // Botón
+    // let boton = document.getElementById("botonSubmit"); // Botón
     let nombre = document.getElementById("name"); // Nombre
     //let direccion = document.getElementById("direccion"); // Dirección
     let email = document.getElementById("email"); // Email
