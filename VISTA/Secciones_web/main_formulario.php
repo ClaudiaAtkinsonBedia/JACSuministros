@@ -1,4 +1,17 @@
 
+ <!-- MIGAS DE PAN -->
+
+  <div class="container">
+    <div class="row">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.php?pagina=home"> Inicio </a></li>
+          <li class="breadcrumb-item active" aria-current="page"> Contacto </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
 <!-- MAIN -->
   
   <main>

@@ -48,8 +48,8 @@
           <i class="bi bi-list"></i>
         </button>
         <div class="col d-lg-none">
-          <img class="mx-auto d-flex d-block d-lg-none text-center" src="img/logo.png" alt="Bootstrap" width="80"
-            height="74"> <!-- Logo para la versión móvil -->
+            <a href="index.php?pagina=home"> <img class="mx-auto d-flex d-block d-lg-none text-center" src="VISTA/img/logo.png" alt="Bootstrap" width="80"
+            height="74"> </a> <!-- Logo para la versión móvil -->
         </div>
 
         <!-- Iconos CUENTA e IDIOMA versión móvil -->
@@ -83,14 +83,14 @@
               <a class="nav-link active m-lg-4" aria-current="page" href="#"> ¿Quiénes somos? </a>
             </li>
             <li>
-              <a href="LandingPage.html"><img class="d-flex d-none d-lg-block" src="img/logo.png" alt="Bootstrap"
+              <a href="index.php?pagina=home"><img class="d-flex d-none d-lg-block" src="VISTA/img/logo.png" alt="Bootstrap"
                   width="80" height="74"></a> <!-- Logo para la versión escritorio -->
             </li>
             <li class="nav-item">
-              <a class="nav-link m-lg-4" href="Contacto.html"> Contacto </a>
+              <a class="nav-link m-lg-4" href="index.php?pagina=contacto"> Contacto </a>
             </li>
             <li class="nav-item m-lg-4">
-              <a class="nav-link" href="#"> Blog </a>
+              <a class="nav-link" href="index.php?pagina=blog"> Blog </a>
             </li>
           </ul>
           
