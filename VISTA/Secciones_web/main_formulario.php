@@ -60,9 +60,11 @@
               placeholder="Ejemplo: Les escribo para preguntarles...">
             <div id="mensajeErrores" class="form-text"> Obligatorio </div>
           </div>
+          
+          <!-- Botón de envío -->
 
           <div class="col-10 col-lg-6 d-flex mx-auto justify-content-center justify-content-lg-end mt-4 mb-5">
-            <button id="submitButton" type="submit" class="btn btn-warning"> Enviar formulario </button>
+              <button id="submitButton" type="submit" class="btn btn-warning"> Enviar formulario </button>
           </div>
         </form>
 
