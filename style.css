@@ -1,4 +1,13 @@
-.uwu
-{
+.uwu {
     border-style: dotted;
+}
+
+.barraCategorias {
+    display: none;
+    /* La barra está oculta por defecto */
+}
+
+.barraSubcategorias {
+    display: none;
+    /* La barra está oculta por defecto */
 }
