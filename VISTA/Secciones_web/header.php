@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -7,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> J.A.C. Suministros </title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/uwu.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="VISTA/css/style.css">
+
 </head>
 
 <body>
@@ -48,8 +48,9 @@
           <i class="bi bi-list"></i>
         </button>
         <div class="col d-lg-none">
-            <a href="index.php?pagina=home"> <img class="mx-auto d-flex d-block d-lg-none text-center" src="VISTA/img/logo.png" alt="Bootstrap" width="80"
-            height="74"> </a> <!-- Logo para la versión móvil -->
+            <a href="index.php?pagina=home">
+                <img class="mx-auto d-flex d-block d-lg-none text-center" src="VISTA/img/logo.png" alt="Bootstrap" width="80" height="74"> <!-- Logo para la versión móvil -->
+            </a> 
         </div>
 
         <!-- Iconos CUENTA e IDIOMA versión móvil -->
@@ -65,37 +66,32 @@
           </div>
         </div>
         <!-- Fin Iconos CUENTA e IDIOMA versión móvil -->
-        
+
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav mx-lg-auto align-items-lg-center">
-            <li class="nav-item dropdown m-lg-4">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Categorías
+            <li class="nav-item m-lg-4">
+              <a class="nav-link" href="#"role="button" aria-expanded="false">
+                <span class="botonCategorias"> Categorías <i class="bi bi-chevron-down"></i> </span>
               </a>
-              <ul class="dropdown-menu"> <!-- Lista de categorías -->
-                <li><a class="dropdown-item" href="#"> Categoría 1 </a></li>
-                <li><a class="dropdown-item" href="#"> Categoría 2 </a></li>
-                <li><a class="dropdown-item" href="#"> Categoría 3 </a></li>
-              </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link active m-lg-4" aria-current="page" href="#"> ¿Quiénes somos? </a>
             </li>
             <li>
-              <a href="index.php?pagina=home"><img class="d-flex d-none d-lg-block" src="VISTA/img/logo.png" alt="Bootstrap"
-                  width="80" height="74"></a> <!-- Logo para la versión escritorio -->
+                <a href="index.php?pagina=home">
+                    <img class="d-flex d-none d-lg-block" src="VISTA/img/logo.png" alt="Bootstrap" width="80" height="74">   <!-- Logo para la versión escritorio -->
+                </a>
+            
             </li>
             <li class="nav-item">
               <a class="nav-link m-lg-4" href="index.php?pagina=contacto"> Contacto </a>
             </li>
             <li class="nav-item m-lg-4">
-              <a class="nav-link" href="index.php?pagina=blog"> Blog </a>
+              <a class="nav-link" href="#"> Blog </a>
             </li>
           </ul>
-          
-          <!-- Botones CUENTA e IDIOMA versión escritorio -->
 
+          <!-- Botones CUENTA e IDIOMA versión escritorio -->
           <div class="d-none d-lg-block">
             <div> <!-- Link idioma -->
               <a href="#"> ES </a> <!-- link idioma español-->
@@ -113,4 +109,53 @@
         </div>
       </div>
     </nav>
+
+    <!-- Barra de categorías -->
+
+    <div class="container">
+      <div class="row">
+        <div class="barraCategorias g-0">
+          <nav class="navbar navbar-expand navbar-light bg-primary d-flex justify-content-center">
+          <ul class="nav navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link opcionCategoria" href="#"> Categoría 1 </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link opcionCategoria" href="#"> Categoría 2 </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link opcionCategoria" href="#"> Categoría 3 </a>
+            </li>
+          </ul>
+        </nav>
+        </div>
+      </div>
+
+      <!-- Barra de subcategorías -->
+
+      <div class="row">
+        <div class="barraSubcategorias g-0">
+          <nav class="navbar navbar-expand navbar-light bg-warning d-flex justify-content-center">
+            <ul class="nav navbar-nav">
+              <li class="nav-item">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> Subcategoría 1 </a>
+                </li>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Subcategoría 2 </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Subcategoría 3 </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Subcategoría 4 </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    
+    <!-- Fin de barra de categorías -->
+
   </header>
