@@ -28,7 +28,7 @@
 
         <!-- FORMULARIO DE CONTACTO -->
         
-        <form id="formContacto" action="#" method="post" novalidate>
+        <form id="formContacto" action="" method="post" novalidate>
           
           <!-- Nombre (obligatorio) -->
 
@@ -76,7 +76,8 @@
           
           <!-- Botón de envío -->
 
-          <div class="col-10 col-lg-6 d-flex mx-auto justify-content-center justify-content-lg-end mt-4 mb-5">
+          <div class="col-10 col-lg-6 d-flex mx-auto justify-content-center justify-content-lg-between mt-4 mb-5">
+              <p id="errorSubmit"></p> <!-- Mensaje confirmación de envío -->
               <button id="submitButton" type="submit" class="btn btn-warning"> Enviar formulario </button>
           </div>
         </form>

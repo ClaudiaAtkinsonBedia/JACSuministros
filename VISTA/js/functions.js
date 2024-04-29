@@ -1,4 +1,5 @@
 window.onload = function() {
+
     // ------------ DECLARACIÓN DE ELEMENTOS DEL DOM ---------------
 
     // BOTÓN E INPUTS
@@ -13,6 +14,15 @@ window.onload = function() {
     let errorCorreo = document.getElementById("emailErrores"); // Email
     let errorTelefono = document.getElementById("telefonoErrores"); // Teléfono
     let errorMensaje = document.getElementById("mensajeErrores"); // Mensaje
+    let errorSubmit = document.getElementById("errorSubmit"); // Mensaje junto al botón de envío (formulario)
+
+
+    // -------------------------- OTRAS VARIABLES -----------------------------------
+
+    let nombreValido = false ;
+    let emailValido = false ;
+    let telefonoValido = false ;
+    let mensajeValido = false ;
 
     // ------------ FUNCIONES DE VALIDACIÓN ---------------------
 
@@ -74,9 +84,11 @@ window.onload = function() {
         let regexC = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         if (email.value === "") {
             errorCorreo.innerHTML = "El correo electrónico es requerido.";
+            email.focus() ;
             return false;
         } else if (!regexC.test(email.value)) {
             errorCorreo.innerHTML = "El correo electrónico no cumple con los requisitos.";
+            email.focus() ;
             return false;
         } else {
             errorCorreo.innerHTML = "";
@@ -97,9 +109,11 @@ window.onload = function() {
         let regexT = /^\d{9}$/;
         if (telefono.value === "") {
             errorTelefono.innerHTML = "El teléfono es requerido.";
+            telefono.focus() ;
             return false;
         } else if (!regexT.test(telefono.value)) {
             errorTelefono.innerHTML = "El teléfono debe tener 9 dígitos.";
+            telefono.focus();
             return false;
         } else {
             errorTelefono.innerHTML = "";
@@ -153,12 +167,23 @@ window.onload = function() {
      * @param {*} e 
      */
     function validarFormulario(e) {
+
         let valido = false;
-        if (validarNombre() && validarEmail() && validarTelefono() && validarMensaje()) {
+
+        if (nombreValido && emailValido && telefonoValido && mensajeValido)
+        {
+            errorSubmit.innerHTML = "TODO ESTÁ BIEN" ;
             valido = true;
-        } else {
+        }
+        else
+        {
+            errorSubmit.style.color = "red";
+            errorSubmit.innerHTML = "Hay campos que requieren atención" ;
+            valido = false ;
             e.preventDefault();
         }
+
+        return valido ;
     }
 
     // ------------ FUNCIONES JQUERY ---------------
@@ -179,22 +204,30 @@ window.onload = function() {
     // -------------- LISTENERS ----------------------
 
     nombre.addEventListener("input", function() {
+        nombreValido = validarNombre();
         cambiaColorInput(errorNombre, validarNombre());
     }, false);
 
     email.addEventListener("input", function() {
+        emailValido = validarEmail();
         cambiaColorInput(errorCorreo, validarEmail());
     }, false);
 
     telefono.addEventListener("input", function() {
+        telefonoValido = validarTelefono();
         cambiaColorInput(errorTelefono, validarTelefono());
     }, false);
 
     mensaje.addEventListener("input", function() {
+        mensajeValido = validarMensaje() ;
         cambiaColorInput(errorMensaje, validarMensaje());
     }, false);
 
+    form.addEventListener("input", validarFormulario, false) ;
+
     form.addEventListener("submit", validarFormulario, false);
+    form.addEventListener("submit", darFoco, false);
+
 
     // -------------- FUNCIONES AUXILIARES ----------------------
 
@@ -216,5 +249,27 @@ window.onload = function() {
         } else {
             elemento.style.color = "red";
         }
+    }
+
+
+    function darFoco() {
+        
+        if (nombreValido === false)
+        {
+            nombre.focus() ;
+        }
+        else if (emailValido === false)
+        {
+            email.focus() ;
+        }
+        else if (telefonoValido === false)
+        {
+            telefono.focus() ;
+        }
+        else if (mensajeValido === false)
+        {
+            mensaje.focus() ;
+        }
+
     }
 };
