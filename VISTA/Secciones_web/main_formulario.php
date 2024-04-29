@@ -76,8 +76,10 @@
           
           <!-- Botón de envío -->
 
+          <p class="d-lg-none text-center" id="errorSubmitMovil"></p> <!-- Mensaje confirmación de envío para versión móvil -->
+
           <div class="col-10 col-lg-6 d-flex mx-auto justify-content-center justify-content-lg-between mt-4 mb-5">
-              <p id="errorSubmit"></p> <!-- Mensaje confirmación de envío -->
+              <p class="d-none d-lg-block" id="errorSubmitEscritorio"></p> <!-- Mensaje confirmación de envío -->
               <button id="submitButton" type="submit" class="btn btn-warning"> Enviar formulario </button>
           </div>
         </form>

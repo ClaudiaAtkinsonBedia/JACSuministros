@@ -14,7 +14,8 @@ window.onload = function() {
     let errorCorreo = document.getElementById("emailErrores"); // Email
     let errorTelefono = document.getElementById("telefonoErrores"); // Teléfono
     let errorMensaje = document.getElementById("mensajeErrores"); // Mensaje
-    let errorSubmit = document.getElementById("errorSubmit"); // Mensaje junto al botón de envío (formulario)
+    let errorSubmitMovil = document.getElementById("errorSubmitMovil") ; // Mensaje junto al botón de envío para versión móvil (formulario)
+    let errorSubmitEscritorio = document.getElementById("errorSubmitEscritorio") ; // Mensaje junto al botón de envío para versión escritorio (formulario)
 
 
     // -------------------------- OTRAS VARIABLES -----------------------------------
@@ -172,13 +173,16 @@ window.onload = function() {
 
         if (nombreValido && emailValido && telefonoValido && mensajeValido)
         {
-            errorSubmit.innerHTML = "TODO ESTÁ BIEN" ;
+            errorSubmitEscritorio.innerHTML = "" ;
+            errorSubmitMovil.innerHTML = "" ;
             valido = true;
         }
         else
         {
-            errorSubmit.style.color = "red";
-            errorSubmit.innerHTML = "Hay campos que requieren atención" ;
+            errorSubmitMovil.style.color = "red";
+            errorSubmitEscritorio.style.color = "red";
+            errorSubmitMovil.innerHTML = "Hay campos que requieren atención" ;
+            errorSubmitEscritorio.innerHTML = "Hay campos que requieren atención" ;
             valido = false ;
             e.preventDefault();
         }
@@ -251,7 +255,9 @@ window.onload = function() {
         }
     }
 
-
+    /**
+     * Función que sirve para dar foco al primer campo no validado del formulario.
+     */
     function darFoco() {
         
         if (nombreValido === false)
