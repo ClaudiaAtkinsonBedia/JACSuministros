@@ -16,6 +16,19 @@ window.onload = function() {
 
     // ------------ FUNCIONES DE VALIDACIÓN ---------------------
 
+
+
+     /**
+     * Función que valida el nombre.
+     * Requisitos:
+     *  - Longitud máxima 50 caracteres.
+     *  - No se permite una única palabra.
+     *  - No se permiten dos espacios seguidos.
+     *  - No se puede comenzar ni terminar con guiones.
+     *  - Los guiones no pueden estar envueltos por espacios.
+     * 
+     * @returns {boolean} Devuelve true si el nombre es correcto, false en caso contrario.
+     */
     function validarNombre() {
         let valido = false;
         let regNombre = /^[A-ZÁÉÍÓÚÄËÏÖÜÑæaø'-záéíóúäëïöüñ?]+(?:[- ][A-ZÁÉÍÓÚÄËÏÖÜÑæaø'-záéíóúäëïöüñ]+)+$/;
@@ -48,6 +61,15 @@ window.onload = function() {
         return valido;
     }
 
+
+     /**
+     * Función que sirve para validar el correo electrónico del formulario.
+     * Requisitos:
+     *  - Debe de ser un correo electrónico válido. Ejemplo: correo@correo.com
+     *  - No puede estar vacío.
+     * 
+     * @returns {boolean} Devuelve true si el correo electrónico es correcto, false en caso contrario.
+     */
     function validarEmail() {
         let regexC = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         if (email.value === "") {
@@ -62,6 +84,15 @@ window.onload = function() {
         }
     }
 
+
+    /**
+     * Función que sirve para validar el teléfono del formulario.
+     * Requisitos:
+     *  - Debe ser un número de 9 dígitos.
+     *  - No puede estar vacío.
+     * 
+     * @returns {boolean} Devuelve true si el teléfono es correcto, false en caso contrario.
+     */
     function validarTelefono() {
         let regexT = /^\d{9}$/;
         if (telefono.value === "") {
@@ -76,6 +107,14 @@ window.onload = function() {
         }
     }
 
+    /**
+     * Función que sirve para validar el mensaje del formulario.
+     * Requisitos:
+     *  - Debe de tener entre 20 y 500 caracteres.
+     *  - No puede estar vacío.
+     * 
+     * @returns {boolean} Devuelve true si el mensaje es correcto, false en caso contrario.
+     */
     function validarMensaje() {
         let valido = false;
         let limiteMinimoCaracteres = /^.{20,}$/;
@@ -106,6 +145,13 @@ window.onload = function() {
         return valido;
     }
 
+
+    /**
+     * Función que sirve para validar el formulario. Reúne todas las validaciones individuales y valida el formulario 
+     * si todas son validadas. En caso de que alguna de las partes no sea validada, el formulario no será validado.
+     * 
+     * @param {*} e 
+     */
     function validarFormulario(e) {
         let valido = false;
         if (validarNombre() && validarEmail() && validarTelefono() && validarMensaje()) {
@@ -116,6 +162,8 @@ window.onload = function() {
     }
 
     // ------------ FUNCIONES JQUERY ---------------
+
+    // Colapsar y animación de expandir para barra de navegación de categorías
 
     $(document).ready(function() {
         $(".botonCategorias").click(function() {
@@ -150,6 +198,16 @@ window.onload = function() {
 
     // -------------- FUNCIONES AUXILIARES ----------------------
 
+
+    /**
+     *  Función que sirve para cambiar de color el texto del input en función de su estado:
+     *  - Si está vacío se pone rojo.
+     *  - Si está incorrecto se pone rojo.
+     *  - Si todo va bien se pone verde.
+     * 
+     * @param {*} elemento Elemento del DOM que queremos modificar.
+     * @param {boolean} esValido Para distinguir si es válido o no, según las preferencias del formulario.
+     */
     function cambiaColorInput(elemento, esValido) {
         if (elemento.value == "") {
             elemento.style.color = "red";

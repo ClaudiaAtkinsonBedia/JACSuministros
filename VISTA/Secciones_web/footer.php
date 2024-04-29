@@ -157,7 +157,7 @@ crossorigin="anonymous"></script> <!-- Llamada Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script> <!-- Llamada JQuery -->
 <!--<script src="VISTA/js/barraNavegacion.js"></script>
 <script src="VISTA/js/validacionesFormulario.js"></script>-->
-<script src="VISTA/js/prueba.js"></script>
+<script src="VISTA/js/functions.js"></script>
 
 
 
