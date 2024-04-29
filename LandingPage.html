@@ -157,185 +157,77 @@
 
   </header>
 
-  <!-- MIGAS DE PAN -->
-
-  <!-- Aquí irían las migas de pan, pero en el home no hay. -->
-
-  <!-- MAIN -->
-  <main>
-
-    <div class="container mb-5">
-      <div class="row mt-4 ms-3">
-        <p> <!-- Texto llamativo -->
-          J.A.C SUMINISTROS INDUSTRIALES S.L., empresa fundada en 2002, formada por un grupo de profesionales con más de
-          40
-          años de experiencia en el sector,
-          por ello tratamos de crecer cada día y así mejorar nuestra relación con nuestros clientes, elemento
-          fundamental
-          para su mayor satisfacción.
-
-          Esperamos aquí poder ayudarles en lo posible, estando siempre a su disposición en nuestra zona de contacto.
+ <!-- MAIN -->
+  
+ <main>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h3 class="mt-5 text-center"> Formulario de contacto </h3>
+        <p class="my-5 text-center">
+          ¿Tiene alguna duda? ¿No encuentra lo que está buscando? <br>
+          Si desea realizar cualquier consulta, rellene el siguiente formulario de contacto y le responderemos lo
+          antes posible.
         </p>
       </div>
-      <div class="row justify-content-lg-end justify-content-center">
-        <div class="col-auto me-lg-5">
-          <a class="btn btn-warning" href="tel:921413272" role="button"> Llámanos </a>
-          <!-- Botón - Llamada a la acción -->
+
+      <!-- FORMULARIO DE CONTACTO -->
+      
+      <form id="formContacto" action="#" method="post" novalidate>
+        
+        <!-- Nombre (obligatorio) -->
+
+        <div class="col-10 col-lg-6 mb-3 mx-auto">
+          <label for="name" class="form-label"> Nombre completo: </label>
+          <input type="text" class="form-control" id="name" name="name" aria-describedby="nameHelp"
+            placeholder="Ejemplo: Ariadna Peña López">
+          <div id="nameErrores" class="form-text"> Obligatorio </div>
         </div>
-      </div>
+
+        <!-- Dirección -->
+
+        <div class="col-10 col-lg-6 mb-3 mx-auto">
+          <label for="direccion" class="form-label"> Dirección: </label>
+          <input type="text" class="form-control" id="direccion" name="direccion" aria-describedby="direccionHelp"
+            placeholder="Ejemplo: C/ La Almadraba 5, 3ºA Segovia 40005">
+          <div id="direccionErrores" class="form-text"> </div>
+        </div>
+
+        <!-- Correo electrónico (obligatorio) -->
+
+        <div class="col-10 col-lg-6 mb-3 mx-auto">
+          <label for="email" class="form-label"> Correo electrónico: </label>
+          <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
+            placeholder="Ejemplo: correo@correo.com">
+          <div id="emailErrores" class="form-text"> Obligatorio </div>
+        </div>
+
+        <!-- Teléfono (obligatorio) -->
+        
+        <div class="col-10 col-lg-6 mb-3 mx-auto">
+          <label for="telefono" class="form-label"> Teléfono: </label>
+          <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Ejemplo: 987654321">
+          <div id="telefonoErrores" class="form-text"> Obligatorio </div>
+        </div>
+        
+        <!-- Su mensaje (obligatorio) -->
+        
+        <div class="col-10 col-lg-6 mb-3 mx-auto">
+          <label for="mensaje" class="form-label"> Su mensaje: </label>
+          <input type="textarea" class="form-control" id="mensaje" name="mensaje" aria-describedby="mensajeHelp"
+            placeholder="Ejemplo: Les escribo para preguntarles...">
+          <div id="mensajeErrores" class="form-text"> Obligatorio </div>
+        </div>
+
+        <div class="col-10 col-lg-6 d-flex mx-auto justify-content-center justify-content-lg-end mt-4 mb-5">
+          <button id="submitButton" type="submit" class="btn btn-warning"> Enviar formulario </button>
+        </div>
+      </form>
+
     </div>
-    
-  </main>
+  </div>
+</main>
 
-  <!-- FOOTER -->
-
-  <footer>
-
-    <!-- ELEMENTOS EXTERNOS AL FOOTER -->
-
-    <div class="container">
-      <div class="row">
-        <h2 class="text-center" id="ubicacion"> ¿Dónde estamos? </h2>
-        <p class="mb-3 text-center"> Desde aquí puedes navegar hacia nuestra tienda de Segovia </p>
-
-        <!-- Mapa -->
-
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1792.054395361165!2d-4.113613923160526!3d40.940642616898266!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd413ee22c58cc2b%3A0x2fb2a28d8e2c4a9a!2sJ.A.C%20SUMINISTROS%20INDUSTRIALES%20S.L.!5e0!3m2!1ses!2ses!4v1713517132231!5m2!1ses!2ses"
-          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-        <!-- Barra de Kit Digital -->
-
-        <p> AQUÍ VA LA BARRA DEL KIT DIGITAL </p>
-      </div>
-    </div>
-
-    <!-- ELEMENTOS INTERNOS AL FOOTER -->
-
-    <!-- Versión escritorio / tablet -->
-
-    <!-- Mapa del sitio escritorio / tablet -->
-
-    <div class="container d-none d-lg-block">
-      <div class="row">
-        <div class="col">
-          <h6 class="text-center"> MAPA DEL SITIO </h6>
-          <ul class="pt-3">
-            <li> Home </li>
-            <li> ¿Quiénes somos? </li>
-            <li> Categorías </li>
-            <li> Contacto </li>
-            <li> Blog </li>
-            <li> Tu cuenta </li>
-          </ul>
-        </div>
-        <!-- Aviso legal escritorio / tablet -->
-
-        <div class="col ps-5 border border-bottom-0 border-end-0 border-top-0 border-dark">
-          <h6 class="text-center"> INFORMACIÓN </h6>
-          <ul class="pt-3">
-            <li> Aviso Legal </li>
-            <li> Política de Cookies </li>
-            <li> Política de Privacidad </li>
-          </ul>
-        </div>
-
-        <!-- Contacto escritorio / tablet -->
-
-        <div class="col ps-5 border border-bottom-0 border-end-0 border-top-0 border-dark">
-          <h6 class="text-center"> CONTACTO </h6>
-          <ul class="pt-3">
-            <li>
-              Dirección:
-              <a href="#ubicacion">
-                J.A.C. Suministros Industriales S.L.
-                Avda de la Constitucion 11
-                40005 Segovia
-              </a>
-            </li>
-            <li>
-              Teléfono:
-              <a href="tel:921413272"> 921 413 272 </a>
-            </li>
-            <li>
-              Fax:
-              921 413 271
-            </li>
-            <li>
-              Correo:
-              <a href="mailto:info@jacsuministros.es"> info@jacsuministros.es </a>
-            </li>
-          </ul>
-
-        </div>
-      </div>
-    </div>
-    <!-- Fin versión escritorio / tablet -->
-
-    <!-- Versión móvil -->
-
-    <!-- Mapa del sitio versión móvil -->
-
-    <div class="container d-lg-none">
-      <div class="row">
-        <div
-          class="col-12 pt-3 d-flex flex-column align-items-center border border-start-0 border-end-0 border-top-0 border-dark">
-          <h6> MAPA DEL SITIO </h6>
-          <ul class="d-flex flex-column">
-            <li> Home </li>
-            <li> ¿Quiénes somos? </li>
-            <li> Categorías </li>
-            <li> Contacto </li>
-            <li> Blog </li>
-            <li> Tu cuenta </li>
-          </ul>
-        </div>
-
-        <!-- Aviso legal versión móvil -->
-
-        <div
-          class="col-12 pt-3 d-flex flex-column align-items-center border border-start-0 border-end-0 border-top-0 border-dark">
-          <h6> INFORMACIÓN </h6>
-          <ul class="d-flex flex-column">
-            <li> Aviso Legal </li>
-            <li> Política de Cookies </li>
-            <li> Política de Privacidad </li>
-          </ul>
-        </div>
-
-        <!-- Contacto versión móvil -->
-
-        <div
-          class="col-12 pt-3 d-flex flex-column align-items-center border border-bottom-0 border-start-0 border-end-0 border-top-0 border-dark">
-          <h6> CONTACTO </h6>
-          <ul class="d-flex flex-column ms-5 ps-5">
-            <li>
-              Dirección: <br>
-              <a href="#ubicacion">
-                J.A.C. Suministros Industriales S.L. <br>
-                Avda de la Constitucion 11 <br>
-                40005 Segovia
-              </a>
-            </li>
-            <li>
-              Teléfono:
-              <a href="tel:921413272"> 921 413 272 </a>
-            </li>
-            <li>
-              Fax:
-              921 413 271
-            </li>
-            <li>
-              Correo:
-              <a href="mailto:info@jacsuministros.es"> info@jacsuministros.es </a>
-            </li>
-          </ul>
-
-        </div>
-      </div>
-    </div>
-    <!-- Fin versión móvil -->
 
   </footer>
 
