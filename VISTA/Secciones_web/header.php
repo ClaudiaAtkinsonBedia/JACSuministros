@@ -74,45 +74,13 @@
                 <span class="botonCategorias"> Categorías <i class="bi bi-chevron-down"></i> </span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active m-lg-4" aria-current="page" href="#"> ¿Quiénes somos? </a>
-            </li>
-            <li>
-                <a href="index.php?pagina=home">
-                    <img class="d-flex d-none d-lg-block" src="VISTA/img/logo.png" alt="Bootstrap" width="80" height="74">   <!-- Logo para la versión escritorio -->
-                </a>
-            
-            </li>
-            <li class="nav-item">
-              <a class="nav-link m-lg-4" href="index.php?pagina=contacto"> Contacto </a>
-            </li>
-            <li class="nav-item m-lg-4">
-              <a class="nav-link" href="#"> Blog </a>
-            </li>
-          </ul>
+            <li class="nav-item d-lg-none">
 
-          <!-- Botones CUENTA e IDIOMA versión escritorio -->
-          <div class="d-none d-lg-block">
-            <div> <!-- Link idioma -->
-              <a href="#"> ES </a> <!-- link idioma español-->
-              |
-              <a href="#"> EN </a> <!-- link idioma inglés -->
-            </div>
-            <div> <!-- Entrar en cuenta y cambiar idioma -->
-              <i class="bi bi-person-circle"></i> <!-- Icono -->
-              <a href="#"> Tu cuenta </a> <!-- link tu cuenta -->
-            </div>
+                <!-- Barra de categorías para móvil -->
 
-          </div>
-          <!-- Fin Botones CUENTA e IDIOMA versión escritorio -->
+     <!-- Barra de categorías -->
 
-        </div>
-      </div>
-    </nav>
-
-    <!-- Barra de categorías -->
-
-    <div class="container">
+     <div class="container">
       <div class="row">
         <div class="barraCategorias g-0">
           <nav class="navbar navbar-expand navbar-light bg-primary d-flex justify-content-center">
@@ -156,6 +124,91 @@
         </div>
       </div>
     
-    <!-- Fin de barra de categorías -->
+    <!-- Fin de barra de categorías para móvil -->
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active m-lg-4" aria-current="page" href="#"> ¿Quiénes somos? </a>
+            </li>
+            <li>
+                <a href="index.php?pagina=home">
+                    <img class="d-flex d-none d-lg-block" src="VISTA/img/logo.png" alt="Bootstrap" width="80" height="74">   <!-- Logo para la versión escritorio -->
+                </a>
+            
+            </li>
+            <li class="nav-item">
+              <a class="nav-link m-lg-4" href="index.php?pagina=contacto"> Contacto </a>
+            </li>
+            <li class="nav-item m-lg-4">
+              <a class="nav-link" href="#"> Blog </a>
+            </li>
+          </ul>
+
+          <!-- Botones CUENTA e IDIOMA versión escritorio -->
+          <div class="d-none d-lg-block">
+            <div> <!-- Link idioma -->
+              <a href="#"> ES </a> <!-- link idioma español-->
+              |
+              <a href="#"> EN </a> <!-- link idioma inglés -->
+            </div>
+            <div> <!-- Entrar en cuenta y cambiar idioma -->
+              <i class="bi bi-person-circle"></i> <!-- Icono -->
+              <a href="#"> Tu cuenta </a> <!-- link tu cuenta -->
+            </div>
+
+          </div>
+          <!-- Fin Botones CUENTA e IDIOMA versión escritorio -->
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- Barra de categorías para escritorio -->
+
+    <div class="container d-none d-lg-block">
+      <div class="row">
+        <div class="barraCategorias g-0">
+          <nav class="navbar navbar-expand navbar-light bg-primary d-flex justify-content-center">
+          <ul class="nav navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link opcionCategoria" href="#"> Categoría 1 </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link opcionCategoria" href="#"> Categoría 2 </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link opcionCategoria" href="#"> Categoría 3 </a>
+            </li>
+          </ul>
+        </nav>
+        </div>
+      </div>
+
+      <!-- Barra de subcategorías -->
+
+      <div class="row">
+        <div class="barraSubcategorias g-0">
+          <nav class="navbar navbar-expand navbar-light bg-warning d-flex justify-content-center">
+            <ul class="nav navbar-nav">
+              <li class="nav-item">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> Subcategoría 1 </a>
+                </li>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Subcategoría 2 </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Subcategoría 3 </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Subcategoría 4 </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    
+  <!-- Fin de barra de categorías para escritorio -->
 
   </header>
