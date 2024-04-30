@@ -48,7 +48,9 @@
                 <h6 class="text-center"> INFORMACIÓN </h6>
                 <ul class="pt-3">
                     <li> Aviso Legal </li>
-                    <li> Política de Cookies </li>
+                    <li> 
+                        <a href="index.php?pagina=cookies"> Política de Cookies </a>
+                    </li>
                     <li> Política de Privacidad </li>
                 </ul>
             </div>
@@ -111,7 +113,9 @@
                 <h6> INFORMACIÓN </h6>
                 <ul class="d-flex flex-column">
                     <li> Aviso Legal </li>
-                    <li> Política de Cookies </li>
+                    <li> 
+                        <a href="index.php?pagina=cookies"> Política de Cookies </a>
+                    </li>
                     <li> Política de Privacidad </li>
                 </ul>
             </div>
