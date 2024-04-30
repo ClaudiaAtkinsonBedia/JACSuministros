@@ -18,7 +18,7 @@
 
             <!-- Barra de Kit Digital -->
 
-            <p> AQUÍ VA LA BARRA DEL KIT DIGITAL </p>
+            <img src="VISTA/img/kit_digital.png" width="width" height="height" alt="Logotipos del Kit Digital"/>
         </div>
     </div>
 
