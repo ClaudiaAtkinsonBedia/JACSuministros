@@ -1,0 +1,29 @@
+{
+    "opcion1": [
+    "subcategoria1",
+    "subcategoria2",
+    "subcategoria3"
+    ],
+    
+    "opcion2": [
+    "subcategoria1",
+    "subcategoria2",
+    "subcategoria3",
+    "subcategoria4"
+    ],
+    
+    "opcion3": [
+    "subcategoria1",
+    "subcategoria2",
+    "subcategoria3"
+    ],
+    
+    "opcion4": [
+    "subcategoria1",
+    "subcategoria2",
+    "subcategoria3",
+    "subcategoria4",
+    "subcategoria5"
+    ]
+
+}

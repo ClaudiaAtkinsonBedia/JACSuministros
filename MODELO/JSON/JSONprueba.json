@@ -1,0 +1,37 @@
+{
+  "ferreteria": {
+    "categorias": [
+      {
+        "nombre": "Herramientas Manuales",
+        "subcategorias": [
+          "Destornilladores",
+          "Martillos",
+          "Llaves Inglesas",
+          "Alicates",
+          "Sierras"
+        ]
+      },
+      {
+        "nombre": "Herramientas Eléctricas",
+        "subcategorias": [
+          "Taladros",
+          "Sierras Eléctricas",
+          "Amoladoras",
+          "Pistolas de Calor",
+          "Soldadoras"
+        ]
+      },
+      {
+        "nombre": "Ferretería de Construcción",
+        "subcategorias": [
+          "Clavos y Tornillos",
+          "Cemento y Mortero",
+          "Cables y Cadenas",
+          "Mallas y Alambrados",
+          "Impermeabilizantes"
+        ]
+      }
+    ]
+  }
+}
+
