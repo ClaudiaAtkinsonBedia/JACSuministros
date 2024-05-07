@@ -1,3 +1,7 @@
+<?php
+    require_once 'CONTROLADOR/BarraSubcategoriasControl.php' ;
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -106,9 +110,7 @@
           <nav class="navbar navbar-expand navbar-light bg-warning d-flex justify-content-center">
             <ul class="nav navbar-nav">
               <li class="nav-item">
-                <li class="nav-item">
-                  <a class="nav-link" href="#"> Subcategoría 1 </a>
-                </li>
+                <a class="nav-link" href="#"> Subcategoría 1 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#"> Subcategoría 2 </a>
@@ -190,10 +192,8 @@
         <div class="barraSubcategorias g-0">
           <nav class="navbar navbar-expand navbar-light bg-warning d-flex justify-content-center">
             <ul class="nav navbar-nav">
-              <li class="nav-item">
-                <li class="nav-item">
+<!--              <li class="nav-item">
                   <a class="nav-link" href="#"> Subcategoría 1 </a>
-                </li>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#"> Subcategoría 2 </a>
@@ -203,7 +203,11 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#"> Subcategoría 4 </a>
-              </li>
+              </li>-->
+
+                <?php
+                    BarraSubcategoriasControl::prueba() ;
+                ?>
             </ul>
           </nav>
         </div>
