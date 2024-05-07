@@ -173,13 +173,13 @@
           <nav class="navbar navbar-expand navbar-light bg-primary d-flex justify-content-center">
           <ul class="nav navbar-nav">
             <li class="nav-item">
-              <a class="nav-link opcionCategoria" href="#"> Categoría 1 </a>
+              <a class="nav-link opcionCategoria" href="?opcion=opcion1"> Categoría 1 </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link opcionCategoria" href="#"> Categoría 2 </a>
+              <a class="nav-link opcionCategoria" href="?opcion=opcion2"> Categoría 2 </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link opcionCategoria" href="#"> Categoría 3 </a>
+              <a class="nav-link opcionCategoria" href="?opcion=opcion3"> Categoría 3 </a>
             </li>
           </ul>
         </nav>
@@ -206,7 +206,9 @@
               </li>-->
 
                 <?php
-                    BarraSubcategoriasControl::prueba() ;
+                    
+                require_once 'CONTROLADOR/RouteSubcategorias.php' ;
+                
                 ?>
             </ul>
           </nav>

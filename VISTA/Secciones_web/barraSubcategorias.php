@@ -1,15 +1,20 @@
 
 <?php
 
-require_once '../../CONTROLADOR/BarraSubcategoriasControl.php' ;
+require_once 'CONTROLADOR/BarraSubcategoriasControl.php' ;
 
- function pintarBarraSubcategorias($enlace, $listaSubcategorias) {
+ function pintarBarraSubcategorias($listaSubcategorias, $opcionSeleccionada) {
 
-//    foreach ($listaSubcategorias as $key => $value) {
-//
-//        $render .= '<li class = "nav-item">' ;
-//        $render .= '<a class = "nav-link" href = "' . $enlace . '"> ' . $value . ' </a>' ;
-//        $render .= '</li>' ;
+    $render = "" ;
+    $subcategorias = $listaSubcategorias[$opcionSeleccionada] ;
      
-     echo "Estamosd dentro de la función de la VISTA" ;    
+    foreach ($subcategorias as $subcategoria ) {
+            
+            $render .= '<li class = "nav-item">' ;
+            $render .= '<a class = "nav-link" href = "#"> ' . $subcategoria . ' </a>' ;
+            $render .= '</li>' ;
+        
+    }
+  
+    echo $render ;
 }

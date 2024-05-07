@@ -1,5 +1,7 @@
 <?php
 
+require_once 'CONTROLADOR/BarraSubcategoriasControl.php' ;
+
 $ruta = $_SERVER['REQUEST_URI'];
 $metodo = $_SERVER['REQUEST_METHOD'];
 
@@ -29,4 +31,5 @@ if ($metodo == 'GET') {
     } else {
         require_once 'VISTA/home.php';
     }
+    
 }
