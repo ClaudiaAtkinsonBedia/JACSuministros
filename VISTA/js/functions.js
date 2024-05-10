@@ -8,6 +8,9 @@ window.onload = function () {
     let telefono = document.getElementById("telefono"); // Teléfono
     let mensaje = document.getElementById("mensaje"); // Mensaje
     let form = document.getElementById("formContacto"); // Formulario de contacto
+    let opcion1 = document.getElementById("opcion1"); // La opción 1 de las categorías
+    let opcion2 = document.getElementById("opcion2"); // La opción 2 de las categorías
+    let opcion3 = document.getElementById("opcion3"); // La opción 3 de las categorías
 
     // MENSAJES DE ERRORES
     let errorNombre = document.getElementById("nameErrores"); // Nombre
@@ -16,6 +19,7 @@ window.onload = function () {
     let errorMensaje = document.getElementById("mensajeErrores"); // Mensaje
     let errorSubmitMovil = document.getElementById("errorSubmitMovil"); // Mensaje junto al botón de envío para versión móvil (formulario)
     let errorSubmitEscritorio = document.getElementById("errorSubmitEscritorio"); // Mensaje junto al botón de envío para versión escritorio (formulario)
+    
 
 
     // -------------------------- OTRAS VARIABLES -----------------------------------
@@ -193,6 +197,10 @@ window.onload = function () {
     // Colapsar y animación de expandir para barra de navegación de categorías
 
     $(document).ready(function () {
+
+        let jsonTroceado ;
+        let opcionCategoria ;
+
         $(".botonCategorias").click(function () {
             $(".barraCategorias").slideToggle();
             $(".barraSubcategorias").slideUp();
@@ -202,28 +210,40 @@ window.onload = function () {
             $(".barraSubcategorias").slideToggle();
         });
 
+        $(".opcion1").click(function(){
+            opcionCategoria = "opcion1" ;
+        }); 
+
+        $(".opcion2").click(function(){
+            opcionCategoria = "opcion2" ;
+        }); 
+
+        $(".opcion3").click(function(){
+            opcionCategoria = "opcion3" ;
+        }); 
+
 
         // Capturando el clic en las opciones de navegación
         $('.opcionCategoria').click(function (event) {
             event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
 
             // Obtener la categoría seleccionada
-            // var categoria = $(this).data('categoria');
+            
 
             // Hacer la solicitud AJAX para obtener los datos
             $.ajax({
                 // url: `http://localhost/JAC_Suministros/CONTROLADOR/RouteSubcategorias.php?opcion=${categoria}`,
-                url: `http://localhost/JAC_Suministros/CONTROLADOR/RouteSubcategorias.php?opcion=$opcion1`,
+                url: `http://localhost/JAC_Suministros/MODELO/JSON/Subcategorias.json`,
                 method: 'GET',
                 dataType: 'json',
-                data: { categoria: categoria },
+                // data: { categoria: categoria },
                 success: function (response) {
                     // Manejar la respuesta del servidor
-                    console.log('Datos recibidos:', response);
+                    console.log('Datos recibidos:', response) ;
 
                     // Por ejemplo, mostrar los datos en algún lugar de tu página
                     // Aquí asumo que tienes un elemento con id="datos" donde deseas mostrar los datos
-                    $('#datos').text(JSON.stringify(response));
+                    actualizarBarraSubcategorias(opcionCategoria, response) ;
                 },
                 error: function (xhr, status, error) {
                     // Manejar cualquier error que ocurra durante la solicitud
@@ -232,6 +252,60 @@ window.onload = function () {
             });
         });
 
+
+       function actualizarBarraSubcategorias(opcion, datos){
+
+        let barraSubcategorias = $('.listaSubcategorias') ;
+        barraSubcategorias.empty() ;
+
+
+        switch (opcion) {
+            
+            case "opcion1":
+                // alert('Categoría 1') ;
+                jsonTroceado = datos['opcion1'] ;
+                break;
+                
+            case "opcion2":
+                // alert('categoría 2') ;
+                jsonTroceado = datos['opcion2'] ;
+            break;
+
+            case "opcion3":
+                // alert('categoría 3') ;
+                jsonTroceado = datos['opcion3'] ;
+            break;
+
+            default:
+                break;
+        }
+        
+        
+        $.each(jsonTroceado, function (index, subcategoria) {
+            let elementoSubcategoria = $('<li>').addClass('nav-link').attr('href', '#').text(subcategoria);
+            barraSubcategorias.append(elementoSubcategoria);
+        });
+       }
+
+
+       /*
+
+      <nav class="navbar navbar-expand navbar-light bg-warning d-flex justify-content-center">
+            <ul class="nav navbar-nav">
+             <li class="nav-item">
+                  <a class="nav-link" href="#"> Subcategoría 1 </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Subcategoría 2 </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Subcategoría 3 </a>
+              </li>
+            </ul>
+          </nav>
+
+
+       */
     });
 
 
@@ -277,6 +351,17 @@ window.onload = function () {
     form.addEventListener("submit", validarFormulario, false);
     form.addEventListener("submit", darFoco, false);
 
+    // opcion1.addEventListener("click", function(){
+    //     opcionCategoria = "opcion1";
+    // }, false);
+
+    // opcion2.addEventListener("click", function(){
+    //     opcionCategoria = "opcion2";
+    // }, false);
+
+    // opcion3.addEventListener("click", function(){
+    //     opcionCategoria = "opcion3";
+    // }, false);
 
     // -------------- FUNCIONES AUXILIARES ----------------------
 

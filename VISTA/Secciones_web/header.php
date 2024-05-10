@@ -90,13 +90,13 @@
           <nav class="navbar navbar-expand navbar-light bg-primary d-flex justify-content-center">
           <ul class="nav navbar-nav">
             <li class="nav-item">
-              <a class="nav-link opcionCategoria" href="#"> Categoría 1 </a>
+              <a class="opcion1 nav-link opcionCategoria" href="#"> Categoría 1 </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link opcionCategoria" href="#"> Categoría 2 </a>
+              <a class="opcion2 nav-link opcionCategoria" href="#"> Categoría 2 </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link opcionCategoria" href="#"> Categoría 3 </a>
+              <a class="opcion3 nav-link opcionCategoria" href="#"> Categoría 3 </a>
             </li>
           </ul>
         </nav>
@@ -108,8 +108,8 @@
       <div class="row">
         <div class="barraSubcategorias g-0">
           <nav class="navbar navbar-expand navbar-light bg-warning d-flex justify-content-center">
-            <ul class="nav navbar-nav">
-              <li class="nav-item">
+            <ul class="listaSubcategorias nav navbar-nav">
+              <!-- <li class="nav-item">
                 <a class="nav-link" href="#"> Subcategoría 1 </a>
               </li>
               <li class="nav-item">
@@ -120,7 +120,7 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#"> Subcategoría 4 </a>
-              </li>
+              </li> -->
             </ul>
           </nav>
         </div>
@@ -173,13 +173,13 @@
           <nav class="navbar navbar-expand navbar-light bg-primary d-flex justify-content-center">
           <ul class="nav navbar-nav">
             <li class="nav-item">
-              <a class="nav-link opcionCategoria" href="#"> Categoría 1 </a>
+              <a class="opcion1 nav-link opcionCategoria" href="#"> Categoría 1 </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link opcionCategoria" href="#"> Categoría 2 </a>
+              <a class="opcion2 nav-link opcionCategoria" href="#"> Categoría 2 </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link opcionCategoria" href="#"> Categoría 3 </a>
+              <a class="opcion3 nav-link opcionCategoria" href="#"> Categoría 3 </a>
             </li>
           </ul>
         </nav>
@@ -191,8 +191,8 @@
       <div class="row">
         <div class="barraSubcategorias g-0">
           <nav class="navbar navbar-expand navbar-light bg-warning d-flex justify-content-center">
-            <ul class="nav navbar-nav">
-             <li class="nav-item">
+            <ul class="listaSubcategorias nav navbar-nav">
+             <!-- <li class="nav-item">
                   <a class="nav-link" href="#"> Subcategoría 1 </a>
               </li>
               <li class="nav-item">
@@ -203,7 +203,7 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#"> Subcategoría 4 </a>
-              </li>
+              </li> -->
 
                 <?php
                     

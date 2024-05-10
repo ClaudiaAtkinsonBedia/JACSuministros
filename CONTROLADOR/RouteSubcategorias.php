@@ -3,13 +3,15 @@
 $ruta = $_SERVER['REQUEST_URI'] ;
 $metodo = $_SERVER['REQUEST_METHOD'] ;
 
+$respuesta ;
+
 if ($metodo == 'GET') {
     
     if (isset($_GET["opcion"])) {
         
         switch ($_GET["opcion"]) {
             case "opcion1":
-                echo "Estamos en la opcion 1 del switch" ;
+                $respuesta = BarraSubcategoriasControl::pintaBarraSubcategorias("opcion1") ;
                 break;
             
             case "opcion2":
@@ -26,3 +28,5 @@ if ($metodo == 'GET') {
     }
     
 }
+
+echo json_encode($respuesta) ;
