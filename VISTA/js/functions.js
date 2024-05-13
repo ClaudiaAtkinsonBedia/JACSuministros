@@ -198,29 +198,75 @@ window.onload = function () {
 
     $(document).ready(function () {
 
-        let jsonTroceado ;
-        let opcionCategoria ;
+        let jsonTroceado ; // Es la parte del JSON que se extrae para el contenido de la barra de subcategorías
+        let opcionCategoria ; // Es la opción capturada a partir de la elección del usuario, servirá para compararla consigo misma
+        let iguales = false ; // Si la comparación de la variable opcionCategoria consigo misma es igual, true; false en caso contrario
 
+        
+    // Capturando el clic en las opciones de categorías
+
+    $(".opcion1").click(function() // Si hacemos click en la opción 1
+    {
+        if (opcionCategoria === "opcion1") // Si la opción seleccionada coincide con la primera opcion, es decir, son iguales...
+        {
+            iguales = true ; // ...igualamos iguales a true
+        }
+        else 
+        {
+            iguales = false ; // Se reinicia el valor a false para que pueda volver al principio
+        }
+        opcionCategoria = "opcion1" ;
+    }); 
+
+    $(".opcion2").click(function() // Si hacemos click en la opción 2
+    {
+        if (opcionCategoria === "opcion2") // Si la opción seleccionada coincide con la primera opcion, es decir, son iguales...
+        {
+            iguales = true ; // ...igualamos iguales a true
+        }
+        else
+        {
+            iguales = false ; // Se reinicia el valor a false para que pueda volver al principio
+        }
+        opcionCategoria = "opcion2" ;
+    }); 
+
+    $(".opcion3").click(function() // Si hacemos click en la opción 3
+    {
+        if (opcionCategoria === "opcion3") // Si la opción seleccionada coincide con la primera opcion, es decir, son iguales...
+        {
+            iguales = true ; // ...igualamos iguales a true
+        }
+        else
+        {
+            iguales = false ; // Se reinicia el valor a false para que pueda volver al principio
+        }
+        opcionCategoria = "opcion3" ;
+    }); 
+
+        // Colapsa las dos barras cuando se hace clic en el botón categorías
+        
         $(".botonCategorias").click(function () {
-            $(".barraCategorias").slideToggle();
-            $(".barraSubcategorias").slideUp();
+            $(".barraCategorias").slideToggle(); // Despliega y despliega barra de categorías
+            $(".barraSubcategorias").slideUp(); // Oculta la barra de subcategorías
         });
 
+
+        // Muestra o colapsa la barra de subcategorías
+        
         $(".opcionCategoria").click(function () {
-            $(".barraSubcategorias").slideToggle();
+
+            if (!$(".barraSubcategorias").is(":visible")) // Si la barra de subcategorias es visible...
+            {
+                $(".barraSubcategorias").slideDown() ; // ...se baja la barra de subcategorias
+            }
+            else if(iguales && $(".barraSubcategorias").is(":visible")) // Si la opción seleccionada por el usuario es la misma, estando la barra visible...
+            {
+                $(".barraSubcategorias").slideUp() ; // ...se sube la barra de subcategorias
+                
+            }
+
         });
-
-        $(".opcion1").click(function(){
-            opcionCategoria = "opcion1" ;
-        }); 
-
-        $(".opcion2").click(function(){
-            opcionCategoria = "opcion2" ;
-        }); 
-
-        $(".opcion3").click(function(){
-            opcionCategoria = "opcion3" ;
-        }); 
 
 
         // Capturando el clic en las opciones de navegación
@@ -281,31 +327,21 @@ window.onload = function () {
         }
         
         
-        $.each(jsonTroceado, function (index, subcategoria) {
+        /*$.each(jsonTroceado, function (index, subcategoria) {
             let elementoSubcategoria = $('<li>').addClass('nav-link').attr('href', '#').text(subcategoria);
             barraSubcategorias.append(elementoSubcategoria);
-        });
+        });*/
+
+        $.each(jsonTroceado, function (index, subcategoria) {
+            
+            let elementoSubcategoria = $('<li>').addClass('nav-item');
+            elementoSubcategoria.append($('<a>').addClass('nav-link').attr('href','#').text(subcategoria));
+            elementoSubcategoria.append($('</a>'));
+            elementoSubcategoria.append($('</li>'));
+            
+            barraSubcategorias.append(elementoSubcategoria);
+        })
        }
-
-
-       /*
-
-      <nav class="navbar navbar-expand navbar-light bg-warning d-flex justify-content-center">
-            <ul class="nav navbar-nav">
-             <li class="nav-item">
-                  <a class="nav-link" href="#"> Subcategoría 1 </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"> Subcategoría 2 </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"> Subcategoría 3 </a>
-              </li>
-            </ul>
-          </nav>
-
-
-       */
     });
 
 
