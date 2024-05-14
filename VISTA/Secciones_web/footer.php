@@ -47,7 +47,9 @@
             <div class="col ps-5 border border-bottom-0 border-end-0 border-top-0 border-dark">
                 <h6 class="text-center"> INFORMACIÓN </h6>
                 <ul class="pt-3">
-                    <li> Aviso Legal </li>
+                    <li>
+                        <a href="index.php?pagina=avisoLegal"> Aviso Legal </a>
+                    </li>
                     <li> 
                         <a href="index.php?pagina=cookies"> Política de Cookies </a>
                     </li>
@@ -70,7 +72,7 @@
                     </li>
                     <li>
                         Teléfono:
-                        921 413 272
+                        <a href="tel:921413272"> 921 413 272 </a>
                     </li>
                     <li>
                         Fax:
@@ -112,7 +114,9 @@
                 class="col-12 pt-3 d-flex flex-column align-items-center border border-start-0 border-end-0 border-top-0 border-dark">
                 <h6> INFORMACIÓN </h6>
                 <ul class="d-flex flex-column">
-                    <li> Aviso Legal </li>
+                    <li>
+                        <a href="index.php?pagina=avisoLegal"> Aviso Legal </a>
+                    </li>
                     <li> 
                         <a href="index.php?pagina=cookies"> Política de Cookies </a>
                     </li>
@@ -136,7 +140,7 @@
                     </li>
                     <li>
                         Teléfono:
-                        921 413 272
+                        <a href="tel:921413272"> 921 413 272 </a>
                     </li>
                     <li>
                         Fax:

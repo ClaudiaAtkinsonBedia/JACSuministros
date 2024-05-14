@@ -24,6 +24,10 @@ if ($metodo == 'GET') {
             case "cookies":
                 require_once 'VISTA/politicaCookies.php';
                 break;
+
+            case "avisoLegal":
+                require_once 'VISTA/avisoLegal.php';
+                break;
             
             default:
                 break;
