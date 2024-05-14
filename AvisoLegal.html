@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> J.A.C. Suministros </title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <!-- BARRA SUPERIOR -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-6"> <!-- Icono + link -->
+          <a href="mailto:info@jacsuministros.es"> <!-- link email -->
+            <i class="bi bi-envelope-fill"></i> <!-- Icono -->
+            info@jacsuministros.es </a>
+        </div>
+        <div class="col-6 text-end"> <!-- Icono + link -->
+          <a href="tel:921413272"> <!-- link teléfono -->
+            <i class="bi bi-telephone-fill"></i> <!-- Icono -->
+            921 41 32 72 </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+
+        <!-- Botón menú cuando colapsa (hamburguesa) -->
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="col d-lg-none">
+          <img class="mx-auto d-flex d-block d-lg-none text-center" src="img/logo.png" alt="Bootstrap" width="80"
+            height="74"> <!-- Logo para la versión móvil -->
+        </div>
+
+        <!-- Iconos CUENTA e IDIOMA versión móvil -->
+
+        <div class="d-lg-none text-center">
+          <div> <!-- Link idioma -->
+            <a href="#"> ES </a> <!-- link idioma español-->
+            |
+            <a href="#"> EN </a> <!-- link idioma inglés -->
+          </div>
+          <div> <!-- Entrar en cuenta y cambiar idioma -->
+            <a href="#"> Tu cuenta </a> <!-- Icono -->
+          </div>
+        </div>
+        <!-- Fin Iconos CUENTA e IDIOMA versión móvil -->
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-lg-auto align-items-lg-center">
+            <li class="nav-item m-lg-4">
+              <a class="nav-link" href="#" role="button" aria-expanded="false">
+                <span class="botonCategorias"> Categorías <i class="bi bi-chevron-down"></i> </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active m-lg-4" aria-current="page" href="#"> ¿Quiénes somos? </a>
+            </li>
+            <li>
+              <img class="d-flex d-none d-lg-block" src="img/logo.png" alt="Bootstrap" width="80" height="74">
+              <!-- Logo para la versión escritorio -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link m-lg-4" href="Contacto.html"> Contacto </a>
+            </li>
+            <li class="nav-item m-lg-4">
+              <a class="nav-link" href="#"> Blog </a>
+            </li>
+          </ul>
+
+          <!-- Botones CUENTA e IDIOMA versión escritorio -->
+          <div class="d-none d-lg-block">
+            <div> <!-- Link idioma -->
+              <a href="#"> ES </a> <!-- link idioma español-->
+              |
+              <a href="#"> EN </a> <!-- link idioma inglés -->
+            </div>
+            <div> <!-- Entrar en cuenta y cambiar idioma -->
+              <i class="bi bi-person-circle"></i> <!-- Icono -->
+              <a href="#"> Tu cuenta </a> <!-- link tu cuenta -->
+            </div>
+
+          </div>
+          <!-- Fin Botones CUENTA e IDIOMA versión escritorio -->
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- Barra de categorías -->
+
+    <div class="container">
+      <div class="row">
+        <div class="barraCategorias g-0">
+          <nav class="navbar navbar-expand navbar-light bg-primary d-flex justify-content-center">
+            <ul class="nav navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link opcionCategoria" href="#"> Categoría 1 </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link opcionCategoria" href="#"> Categoría 2 </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link opcionCategoria" href="#"> Categoría 3 </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Barra de subcategorías -->
+
+      <div class="row">
+        <div class="barraSubcategorias g-0">
+          <nav class="navbar navbar-expand navbar-light bg-warning d-flex justify-content-center">
+            <ul class="nav navbar-nav">
+              <li class="nav-item">
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Subcategoría 1 </a>
+              </li>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Subcategoría 2 </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Subcategoría 3 </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Subcategoría 4 </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Fin de barra de categorías -->
+
+  </header>
+
+
+
+  <!-- MIGAS DE PAN -->
+
+  <div class="container">
+    <div class="row">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.php?pagina=home"> Inicio </a></li>
+          <li class="breadcrumb-item active" aria-current="page"> Aviso Legal </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+
+  <main>
+    <div class="container">
+      <div class="row">
+
+        <h1 class="text-center"> Aviso Legal </h1>
+
+        <p class="col-auto"> En cumplimiento del artículo 10 de la Ley 34/2002, del 11 de julio, de servicios de la Sociedad de la
+          Información y Comercio Electrónico (LSSICE) se exponen a continuación los datos identificativos de la empresa.
+        </p>
+
+        <p class="col-4">
+          <span class="fw-bold"> Denominación social: </span>
+          <br>
+          J.A.C Suministros Industriales S.L.
+        </p>
+
+        <p class="col-4">
+          <span class="fw-bold"> Número de identificación fiscal: </span>
+          <br>
+          B40184533
+        </p>
+
+        <p class="col-4">
+          <span class="fw-bold"> Domicilio social: </span>
+          <br>
+          <a href="#ubicacion">
+            Avda de la Constitucion 11
+
+            40005 Segovia
+          </a>
+
+        </p>
+
+        <p class="col-4">
+          <span class="fw-bold"> Correo Electrónico: </span>
+          <br>
+          <a href="mailto:info@jacsuministros.es"> info@jacsuministros.es </a>
+        </p>
+
+        <p class="col-4">
+          <span class="fw-bold"> Teléfono: </span>
+          <br>
+          <a href="tel:921 413 272"> 921 413 272 </a>
+        </p>
+
+        <p class="col-4">
+          <span class="fw-bold"> Fax: </span>
+          <br>
+          921 413 271
+        </p>
+
+        <p>
+          <span class="fw-bold"> Datos de inscripción en el registro mercantil: </span>
+          <br>
+          J.A.C Suministros Industriales S.L., sociedad [especificar] constituida en [especificar], en el año
+          [especificar], por Escritura Pública número [especificar], ante el notario [especificar], del Ilustre Colegio
+          de [especificar].
+        </p>
+
+        <p>
+          Inscrita en el Registro Mercantil de [especificar] en el tomo [especificar], folio [especificar], sección
+          [especificar] y hoja [especificar], inscripción [especificar].
+        </p>
+
+        <p>
+          Datos relativos a la autorización administrativa previa para el ejercicio de la actividad:
+          <br>
+          [especificar]
+        </p>
+
+        <p>
+          <span class="fw-bold">Códigos de conducta a los que la empresa está adherida:</span>
+          <br>
+          [especificar]
+        </p>
+
+
+        <p>
+          <span class="fw-bold">Titulación académica:</span>
+          <br>
+          [especificar]
+        </p>
+
+
+        <p>
+          <span class="fw-bold"> Estado de la Unión Europea o del ámbito económico europeo donde fue concedida dicha
+            titulación: </span>
+          <br>
+          [especificar]
+        </p>
+
+        <p>
+          <span class="fw-bold">Precios y condiciones:</span>
+          <br>
+          [Indicar los datos exactos sobre el precio, impuestos y modalidad de pago]
+        </p>
+
+        <p>
+          <span class="fw-bold"> Forma y gastos de envío: </span>
+          <br>
+          [Indicar los datos exactos sobre el envío y las condiciones de éste]
+        </p>
+
+        <p>
+          Este sitio web ha sido creado por la empresa J.A.C Suministros Industriales S.L. con carácter informativo y
+          para uso personal de los usuarios. A través de este Aviso legal, se pretende regular el acceso y uso de este
+          sitio web, así como la relación entre el sitio web y sus usuarios. Accediendo a este sitio web se aceptan los
+          siguientes términos y condiciones: El acceso a este sitio web es responsabilidad exclusiva de los usuarios.
+        </p>
+
+        <p>
+          El simple acceso a este sitio web no supone entablar ningún tipo de relación comercial entre J.A.C Suministros
+          Industriales S.L. y el usuario.
+        </p>
+
+        <p>
+          El acceso y la navegación en este sitio web supone aceptar y conocer las advertencias legales, condiciones y
+          términos de uso contenidas en ella.
+        </p>
+
+        <p>
+          El titular del sitio web puede ofrecer servicios o productos que podrán encontrarse sometidos a unas condiciones
+          particulares propias que, según los casos, sustituyan, completen y/o modifiquen las presentes condiciones, y
+          sobre las cuales se informará al usuario en cada caso concreto.
+        </p>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <!-- ELEMENTOS EXTERNOS AL FOOTER -->
+
+    <div class="container">
+      <div class="row">
+        <h2 class="text-center" id="ubicacion"> ¿Dónde estamos? </h2>
+        <p class="mb-3 text-center"> Desde aquí puedes navegar hacia nuestra tienda de Segovia </p>
+
+        <!-- Mapa -->
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1792.054395361165!2d-4.113613923160526!3d40.940642616898266!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd413ee22c58cc2b%3A0x2fb2a28d8e2c4a9a!2sJ.A.C%20SUMINISTROS%20INDUSTRIALES%20S.L.!5e0!3m2!1ses!2ses!4v1713517132231!5m2!1ses!2ses"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <!-- Barra de Kit Digital -->
+
+        <p> AQUÍ VA LA BARRA DEL KIT DIGITAL </p>
+      </div>
+    </div>
+
+    <!-- ELEMENTOS INTERNOS AL FOOTER -->
+
+    <!-- Versión escritorio / tablet -->
+
+    <!-- Mapa del sitio versión escritorio / tablet -->
+
+    <div class="container d-none d-lg-block">
+      <div class="row">
+        <div class="col">
+          <h6 class="text-center"> MAPA DEL SITIO </h6>
+          <ul class="pt-3">
+            <li> Home </li>
+            <li> ¿Quiénes somos? </li>
+            <li> Categorías </li>
+            <li> Contacto </li>
+            <li> Blog </li>
+            <li> Tu cuenta </li>
+          </ul>
+        </div>
+
+        <!-- Aviso legal versión escritorio / tablet -->
+
+        <div class="col ps-5 border border-bottom-0 border-end-0 border-top-0 border-dark">
+          <h6 class="text-center"> INFORMACIÓN </h6>
+          <ul class="pt-3">
+            <li> Aviso Legal </li>
+            <li> Política de Cookies </li>
+            <li> Política de Privacidad </li>
+          </ul>
+        </div>
+
+        <!-- Contacto versión escritorio / tablet -->
+
+        <div class="col ps-5 border border-bottom-0 border-end-0 border-top-0 border-dark">
+          <h6 class="text-center"> CONTACTO </h6>
+          <ul class="pt-3">
+            <li>
+              Dirección:
+              <a href="#ubicacion">
+                J.A.C. Suministros Industriales S.L.
+                Avda de la Constitucion 11
+                40005 Segovia
+              </a>
+            </li>
+            <li>
+              Teléfono:
+              921 413 272
+            </li>
+            <li>
+              Fax:
+              921 413 271
+            </li>
+            <li>
+              Correo:
+              <a href="mailto:info@jacsuministros.es"> info@jacsuministros.es </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <!-- Fin versión escritorio / tablet -->
+
+    <!-- Versión móvil -->
+
+    <!-- Mapa del sitio versión móvil -->
+
+    <div class="container d-lg-none">
+      <div class="row">
+        <div
+          class="col-12 pt-3 d-flex flex-column align-items-center border border-start-0 border-end-0 border-top-0 border-dark">
+          <h6> MAPA DEL SITIO </h6>
+          <ul class="d-flex flex-column">
+            <li> Home </li>
+            <li> ¿Quiénes somos? </li>
+            <li> Categorías </li>
+            <li> Contacto </li>
+            <li> Blog </li>
+            <li> Tu cuenta </li>
+          </ul>
+        </div>
+
+        <!-- Aviso legal versión móvil -->
+
+        <div
+          class="col-12 pt-3 d-flex flex-column align-items-center border border-start-0 border-end-0 border-top-0 border-dark">
+          <h6> INFORMACIÓN </h6>
+          <ul class="d-flex flex-column">
+            <li> Aviso Legal </li>
+            <li> Política de Cookies </li>
+            <li> Política de Privacidad </li>
+          </ul>
+        </div>
+
+        <!-- Contacto versión móvil -->
+
+        <div
+          class="col-12 pt-3 d-flex flex-column align-items-center border border-bottom-0 border-start-0 border-end-0 border-top-0 border-dark">
+          <h6> CONTACTO </h6>
+          <ul class="d-flex flex-column ms-5 ps-5">
+            <li>
+              Dirección: <br>
+              <a href="#ubicacion">
+                J.A.C. Suministros Industriales S.L. <br>
+                Avda de la Constitucion 11 <br>
+                40005 Segovia
+              </a>
+            </li>
+            <li>
+              Teléfono:
+              921 413 272
+            </li>
+            <li>
+              Fax:
+              921 413 271
+            </li>
+            <li>
+              Correo:
+              <a href="mailto:info@jacsuministros.es"> info@jacsuministros.es </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <!-- Fin versión móvil -->
+
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script src="functions.js"></script>
+  <script src="barraNavegacion.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
