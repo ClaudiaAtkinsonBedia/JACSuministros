@@ -28,7 +28,15 @@ if ($metodo == 'GET') {
             case "avisoLegal":
                 require_once 'VISTA/avisoLegal.php';
                 break;
+
+            case "categoria1":
+                require_once 'VISTA/categoria1.php';
+                break;
             
+            case "subcategoria1":
+                require_once 'VISTA/subcategoria1.php';
+                break;
+
             default:
                 break;
         }

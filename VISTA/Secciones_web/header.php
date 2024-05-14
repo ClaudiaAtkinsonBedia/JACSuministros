@@ -173,7 +173,7 @@
           <nav class="navbar navbar-expand navbar-light bg-primary d-flex justify-content-center">
           <ul class="nav navbar-nav">
             <li class="nav-item">
-              <a class="opcion1 nav-link opcionCategoria" href="#"> Categoría 1 </a>
+              <a class="opcion1 nav-link opcionCategoria" href=""> Categoría 1 </a>
             </li>
             <li class="nav-item">
               <a class="opcion2 nav-link opcionCategoria" href="#"> Categoría 2 </a>
