@@ -1,15 +1,15 @@
 {
     "opcion1": [
-    "subcategoria1",
-    "albaricoque",
-    "chocolate"
+    ["Subcategoría 1", "subcategoria1"],
+    ["Subcategoría 2", "subcategoria2"],
+    ["Subcategoría 3", "subcategoria3"]
     ],
     
     "opcion2": [
-    "zanahorias",
-    "limones",
-    "cacahuetes",
-    "saltamontes"
+        ["Zanahorias", "zanahorias"],
+        ["Limones", "limones"],
+        ["Cacahuetes", "cacahuetes"],
+        ["Saltamontes", "saltamontes"]
     ],
     
     "opcion3": [

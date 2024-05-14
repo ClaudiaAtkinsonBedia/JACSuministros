@@ -335,7 +335,7 @@ window.onload = function () {
         $.each(jsonTroceado, function (index, subcategoria) {
             
             let elementoSubcategoria = $('<li>').addClass('nav-item');
-            elementoSubcategoria.append($('<a>').addClass('nav-link').attr('href','index.php?pagina=' + subcategoria).text(subcategoria));
+            elementoSubcategoria.append($('<a>').addClass('nav-link').attr('href','index.php?pagina=' + subcategoria[1]).text(subcategoria[0]));
             elementoSubcategoria.append($('</a>'));
             elementoSubcategoria.append($('</li>'));
             

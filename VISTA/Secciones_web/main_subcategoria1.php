@@ -28,7 +28,13 @@
       </div>
 
       <div class="col">
+        <h2 class="mb-4"> Descripción del producto </h2>
         <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sequi delectus quo facere, consectetur iure eum laboriosam 
+          veritatis dignissimos deserunt corporis quidem non vero rem ipsa nihil placeat reprehenderit accusamus?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sequi delectus quo facere, consectetur iure eum laboriosam 
+          veritatis dignissimos deserunt corporis quidem non vero rem ipsa nihil placeat reprehenderit accusamus?
+          <br>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sequi delectus quo facere, consectetur iure eum laboriosam 
           veritatis dignissimos deserunt corporis quidem non vero rem ipsa nihil placeat reprehenderit accusamus?
         </p>
