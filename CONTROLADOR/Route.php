@@ -29,6 +29,10 @@ if ($metodo == 'GET') {
                 require_once 'VISTA/avisoLegal.php';
                 break;
 
+            case "politicaPrivacidad":
+                require_once 'VISTA/politicaPrivacidad.php';
+                break;
+
             case "categoria1":
                 require_once 'VISTA/categoria1.php';
                 break;

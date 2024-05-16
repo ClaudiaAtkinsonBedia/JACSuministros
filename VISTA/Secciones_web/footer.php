@@ -53,7 +53,9 @@
                     <li> 
                         <a href="index.php?pagina=cookies"> Política de Cookies </a>
                     </li>
-                    <li> Política de Privacidad </li>
+                    <li>
+                        <a href="index.php?pagina=politicaPrivacidad"> Política de Privacidad </a>
+                    </li>
                 </ul>
             </div>
 
@@ -120,7 +122,9 @@
                     <li> 
                         <a href="index.php?pagina=cookies"> Política de Cookies </a>
                     </li>
-                    <li> Política de Privacidad </li>
+                    <li> 
+                        <a href="index.php?pagina=politicaPrivacidad"> Política de Privacidad </a>    
+                    </li>
                 </ul>
             </div>
 
