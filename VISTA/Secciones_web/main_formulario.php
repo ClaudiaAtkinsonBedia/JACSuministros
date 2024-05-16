@@ -28,7 +28,7 @@
 
         <!-- FORMULARIO DE CONTACTO -->
         
-        <form id="formContacto" action="" method="post" novalidate>
+        <form id="formContacto" action="CONTROLADOR/EnviarCorreo.php" method="post" novalidate>
           
           <!-- Nombre (obligatorio) -->
 
