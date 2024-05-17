@@ -60,8 +60,7 @@ if ($metodo === 'POST') {
         $mail->CharSet = 'UTF-8';
 
         $mail->send();
-        // echo 'Message has been sent';
-        Header('Location: CONTROLADOR/Route.php') ;
+        echo 'Message has been sent';
 
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
