@@ -19,6 +19,7 @@ require_once '../PHPMailer/src/SMTP.php';
 $metodo = $_SERVER['REQUEST_METHOD'];
 
 if ($metodo === 'POST') {
+
     $nombre = filter_var($_POST['name'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $direccion = filter_var($_POST['direccion'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
@@ -41,10 +42,10 @@ if ($metodo === 'POST') {
         $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
         //Recipients
-        $mail->setFrom('adrianarjonabravo@hotmail.es', $nombre);
+        $mail->setFrom('adrianarjonabravo@hotmail.es', html_entity_decode($nombre, ENT_QUOTES, 'UTF-8'));
         $mail->addAddress('adrianarjonabravo@hotmail.es', 'JAC Suministros');     //Add a recipient
         // $mail->addAddress('ellen@example.com');               //Name is optional
-        $mail->addReplyTo($email, $nombre);
+        $mail->addReplyTo($email, html_entity_decode($nombre, ENT_QUOTES, 'UTF-8'));
         // $mail->addCC('cc@example.com');
         // $mail->addBCC('bcc@example.com');
 
@@ -114,7 +115,7 @@ if ($metodo === 'POST') {
 
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = 'Mensaje de ' . $nombre;
+        $mail->Subject = 'Mensaje de ' . html_entity_decode($nombre, ENT_QUOTES, 'UTF-8');
         $mail->Body    = mensajeHTML($nombre, $direccion, $email, $telefono, $mensaje) ;
         $mail->AltBody = $mensajeTextoPlano ;
 
