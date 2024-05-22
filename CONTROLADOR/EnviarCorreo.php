@@ -30,7 +30,8 @@ if ($metodo === 'POST') {
 
     try {
         //Server settings
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+        // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+        $mail->SMTPDebug = 0;                      //Enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
         $mail->Host       = 'smtp.office365.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
@@ -43,7 +44,7 @@ if ($metodo === 'POST') {
         $mail->setFrom('adrianarjonabravo@hotmail.es', $nombre);
         $mail->addAddress('adrianarjonabravo@hotmail.es', 'JAC Suministros');     //Add a recipient
         // $mail->addAddress('ellen@example.com');               //Name is optional
-        $mail->addReplyTo('info@example.com', 'JAC Suminstros');
+        $mail->addReplyTo($email, $nombre);
         // $mail->addCC('cc@example.com');
         // $mail->addBCC('bcc@example.com');
 
@@ -51,16 +52,78 @@ if ($metodo === 'POST') {
         // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
         // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
 
+        function mensajeHTML($nombre, $direccion, $email, $telefono, $mensaje) {
+            
+            $html = '
+            <!DOCTYPE html>
+            <html lang="es">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title> Mensaje de ' . $nombre . ' </title>
+                </head>
+                <body>
+            
+                    <h3> Tiene un mensaje de ' . $nombre . ' </h3>
+
+                    <hr>
+
+                    <h5> MENSAJE: </h5>
+                    
+                     <p> ' . $mensaje . '</p>
+
+                    <br><br>
+                    <hr>
+ 
+                    <h3> Los datos de contacto son: </h3>
+                    <ul>
+                        <li> Dirección:
+                            <br> 
+                            ' . $direccion . '
+                        </li>
+
+                        <br>
+
+                        <li> Email:
+                            <br> 
+                            <a href="mailto:' . $email . '">' . $email . '</a>
+                        </li>
+
+                        <br>
+
+                        <li> Teléfono: 
+                            <br> 
+                            <a href="tel:' . $telefono . '">' . $telefono . '</a>
+                        </li>
+                    </ul>
+                </body>
+            </html>
+            ';
+            return $html ;
+        }
+
+        $mensajeTextoPlano = "
+        Tiene un mensaje de $nombre \n\n
+        MENSAJE: $mensaje \n\n
+        DATOS DE CONTACTO: \n
+        \t Dirección: $direccion \n
+        \t Email: $email \n
+        \t Teléfono: $telefono
+        " ;
+
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
         $mail->Subject = 'Mensaje de ' . $nombre;
-        $mail->Body    = $mensaje;
-        $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+        $mail->Body    = mensajeHTML($nombre, $direccion, $email, $telefono, $mensaje) ;
+        $mail->AltBody = $mensajeTextoPlano ;
 
         $mail->CharSet = 'UTF-8';
 
         $mail->send();
         echo 'Message has been sent';
+        // header('Location: ../index.php?pagina=home'); // Cambia 'index.php' por la ruta de tu página principal
+        exit(); // Detiene la ejecución del script después de la redirección
 
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
