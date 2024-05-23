@@ -66,14 +66,13 @@
           </div>
           
           <!-- Su mensaje (obligatorio) -->
-          
+
           <div class="col-10 col-lg-6 mb-3 mx-auto">
             <label for="mensaje" class="form-label"> Su mensaje: </label>
-            <input type="textarea" class="form-control" id="mensaje" name="mensaje" aria-describedby="mensajeHelp"
-              placeholder="Ejemplo: Les escribo para preguntarles...">
+            <textarea class="form-control" id="mensaje" name="mensaje" rows="3" aria-describedby="mensajeHelp" placeholder="Ejemplo: Les escribo para preguntarles..."></textarea>
             <div id="mensajeErrores" class="form-text"> Obligatorio </div>
           </div>
-          
+                    
           <!-- Botón de envío -->
 
           <p class="d-lg-none text-center" id="errorSubmitMovil"></p> <!-- Mensaje confirmación de envío para versión móvil -->

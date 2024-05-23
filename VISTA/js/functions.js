@@ -135,34 +135,47 @@ window.onload = function () {
      * @returns {boolean} Devuelve true si el mensaje es correcto, false en caso contrario.
      */
     function validarMensaje() {
-        let valido = false;
-        let limiteMinimoCaracteres = /^.{20,}$/;
-        let limiteMaximoCaracteres = /^.{0,500}$/;
 
-        if (mensaje.value.trim() === "") {
-            errorMensaje.innerHTML = "El mensaje es requerido.";
-            mensaje.focus();
-            valido = false;
-        } else {
-            if (!limiteMinimoCaracteres.test(mensaje.value)) {
-                errorMensaje.innerHTML = "El mensaje debe tener un mínimo de 20 caracteres.";
+        let valido = false;
+        let longitud = mensaje.value.length ;
+        const limiteMinimoCaracteres = 20 ;
+        const limiteMaximoCaracteres = 500 ;
+        
+        
+            if (longitud == 0) {
+                errorMensaje.innerHTML = "El mensaje es requerido.";
                 mensaje.focus();
                 valido = false;
-            } else if (!limiteMaximoCaracteres.test(mensaje.value)) {
-                let longitud = mensaje.value.length;
-                errorMensaje.innerHTML = longitud + "/500 <br>" +
-                    "El mensaje debe tener un máximo de 500 caracteres.";
-                mensaje.focus();
-                valido = false;
-            } else {
-                let longitud = mensaje.value.length;
-                errorMensaje.innerHTML = longitud + "/500";
-                valido = true;
             }
-        }
+            else
+            {
+                if (longitud < limiteMinimoCaracteres){
+
+                    longitud = mensaje.value.length;
+                    errorMensaje.innerHTML = "El mensaje debe tener un mínimo de 20 caracteres.";
+                    mensaje.focus();
+                    valido = false;
+                }
+                else if(longitud > limiteMaximoCaracteres){
+                    
+                    longitud = mensaje.value.length;
+                    errorMensaje.innerHTML = longitud + "/500 <br>" +
+                    "El mensaje debe tener un máximo de 500 caracteres.";
+                    mensaje.focus();
+                    valido = false;
+                }
+                else
+                {
+                    longitud = mensaje.value.length;
+                    errorMensaje.innerHTML = longitud + "/500";
+                    valido = true;
+                }
+            }
 
         return valido;
     }
+
+    
 
 
     /**
@@ -382,7 +395,7 @@ window.onload = function () {
         mensajeValido = validarMensaje();
         cambiaColorInput(errorMensaje, validarMensaje());
     }, false);
-
+    
     form.addEventListener("input", validarFormulario, false);
 
     form.addEventListener("submit", validarFormulario, false);
