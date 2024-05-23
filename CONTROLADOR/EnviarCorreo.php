@@ -37,13 +37,13 @@ if ($metodo === 'POST') {
         $mail->Host       = 'smtp.office365.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
         $mail->Username   = 'adrianarjonabravo@hotmail.es';                     //SMTP username
-        $mail->Password   = 'aawjxkztkljodyxl';                               //SMTP password
+        $mail->Password   = 'jpzkcrirdjjxtdfi';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
         $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
         //Recipients
         $mail->setFrom('adrianarjonabravo@hotmail.es', html_entity_decode($nombre, ENT_QUOTES, 'UTF-8'));
-        $mail->addAddress('adrianarjonabravo@hotmail.es', 'JAC Suministros');     //Add a recipient
+        $mail->addAddress('info@JAC.com', 'JAC Suministros');     //Add a recipient
         // $mail->addAddress('ellen@example.com');               //Name is optional
         $mail->addReplyTo($email, html_entity_decode($nombre, ENT_QUOTES, 'UTF-8'));
         // $mail->addCC('cc@example.com');
@@ -128,7 +128,8 @@ if ($metodo === 'POST') {
 
     } catch (Exception $e) {
         
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        header('Location: ../index.php?pagina=contacto&enviado=false');
     }
 
     //     $destinatario = 'adrian.arjona@abacodev.com';

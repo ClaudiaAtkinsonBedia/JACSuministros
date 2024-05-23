@@ -82,6 +82,7 @@
               <p class="d-none d-lg-block" id="errorSubmitEscritorio"></p> <!-- Mensaje confirmación de envío -->
               <button id="submitButton" type="submit" class="btn btn-warning"> Enviar formulario </button>
           </div>
+
         </form>
 
       </div>

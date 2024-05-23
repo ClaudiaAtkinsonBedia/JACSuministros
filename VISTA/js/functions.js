@@ -360,6 +360,7 @@ window.onload = function () {
     //     }
     // });
 
+
     // -------------- LISTENERS ----------------------
 
     nombre.addEventListener("input", function () {
