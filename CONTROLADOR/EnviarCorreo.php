@@ -43,7 +43,7 @@ if ($metodo === 'POST') {
 
         //Recipients
         $mail->setFrom('adrianarjonabravo@hotmail.es', html_entity_decode($nombre, ENT_QUOTES, 'UTF-8'));
-        $mail->addAddress('info@JAC.com', 'JAC Suministros');     //Add a recipient
+        $mail->addAddress('adrianarjonabravo@hotmail.es', 'JAC Suministros');     //Add a recipient
         // $mail->addAddress('ellen@example.com');               //Name is optional
         $mail->addReplyTo($email, html_entity_decode($nombre, ENT_QUOTES, 'UTF-8'));
         // $mail->addCC('cc@example.com');
