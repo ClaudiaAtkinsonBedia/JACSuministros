@@ -122,11 +122,12 @@ if ($metodo === 'POST') {
         $mail->CharSet = 'UTF-8';
 
         $mail->send();
-        echo 'Message has been sent';
-        // header('Location: ../index.php?pagina=home'); // Cambia 'index.php' por la ruta de tu página principal
+        // echo 'Message has been sent';
+        header('Location: ../index.php?pagina=contacto&enviado=true');
         exit(); // Detiene la ejecución del script después de la redirección
 
     } catch (Exception $e) {
+        
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
 

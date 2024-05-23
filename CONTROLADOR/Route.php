@@ -18,8 +18,8 @@ if ($metodo == 'GET') {
                 break;
             
              case "contacto":
-                require_once 'VISTA/contacto.php';
-                break;
+                    require_once 'VISTA/contacto.php';
+                    break;
 
             case "cookies":
                 require_once 'VISTA/politicaCookies.php';
