@@ -33,10 +33,16 @@
             <div class="col">
                 <h6 class="text-center"> MAPA DEL SITIO </h6>
                 <ul class="pt-3">
-                    <li> Home </li>
-                    <li> ¿Quiénes somos? </li>
+                <li> 
+                       <a href="index.php?pagina=home"> Home </a> 
+                    </li>
+                    <li> 
+                        <a href="index.php?pagina=sobreNosotros"> ¿Quiénes somos?  </a>
+                    </li>
                     <li> Categorías </li>
-                    <li> Contacto </li>
+                    <li> 
+                        <a href="index.php?pagina=contacto"> Contacto </a>    
+                    </li>
                     <li> Blog </li>
                     <li> Tu cuenta </li>
                 </ul>
@@ -101,10 +107,16 @@
                 class="col-12 pt-3 d-flex flex-column align-items-center border border-start-0 border-end-0 border-top-0 border-dark">
                 <h6> MAPA DEL SITIO </h6>
                 <ul class="d-flex flex-column">
-                    <li> Home </li>
-                    <li> ¿Quiénes somos? </li>
+                    <li> 
+                       <a href="index.php?pagina=home"> Home </a> 
+                    </li>
+                    <li> 
+                        <a href="index.php?pagina=sobreNosotros"> ¿Quiénes somos?  </a>
+                    </li>
                     <li> Categorías </li>
-                    <li> Contacto </li>
+                    <li> 
+                        <a href="index.php?pagina=contacto"> Contacto </a>    
+                    </li>
                     <li> Blog </li>
                     <li> Tu cuenta </li>
                 </ul>
@@ -170,10 +182,7 @@ crossorigin="anonymous"></script> <!-- Llamada Bootstrap -->
 <!--<script src="VISTA/js/barraNavegacion.js"></script>
 <script src="VISTA/js/validacionesFormulario.js"></script>-->
 <script src="VISTA/js/functions.js"></script>
-
-
-
-
+<script src="VISTA/js/animaciones.js"></script>
 
 
 </body>

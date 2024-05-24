@@ -11,3 +11,33 @@
     display: none;
     /* La barra está oculta por defecto */
 }
+
+
+/* Efecto de desenfoque */
+
+.blur {
+    filter: blur(1px); /* Ajusta el valor (5px) para incrementar o disminuir el desenfoque */
+  }
+
+  .card-title {
+    display: inline-block;
+    overflow: hidden; /* Ensures the text is not visible initially */
+    white-space: nowrap; /* Keeps the text in a single line */
+    border-right: 0.15em solid orange; /* Cursor effect */
+    animation: typing 2s steps(40, end) forwards, blink-caret 0.75s step-end 2;
+  }
+
+  .animate {
+    animation: typing 2s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 50%; }
+  }
+
+ @keyframes blink-caret {
+    0% { border-color: transparent; }
+    50% { border-color: orange; }
+    100% { border-color: orange; }
+  }

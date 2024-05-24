@@ -21,6 +21,10 @@ if ($metodo == 'GET') {
                     require_once 'VISTA/contacto.php';
                     break;
 
+            case "sobreNosotros":
+                require_once 'VISTA/sobreNosotros.php';
+                break;
+
             case "cookies":
                 require_once 'VISTA/politicaCookies.php';
                 break;

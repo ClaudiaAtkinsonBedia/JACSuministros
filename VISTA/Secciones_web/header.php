@@ -51,7 +51,7 @@
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <i class="bi bi-list"></i>
         </button>
-        <div class="col d-lg-none">
+        <div class="d-lg-none">
             <a href="index.php?pagina=home">
                 <img class="mx-auto d-flex d-block d-lg-none text-center" src="VISTA/img/logo.png" alt="Bootstrap" width="80" height="74"> <!-- Logo para la versión móvil -->
             </a> 
@@ -130,7 +130,7 @@
 
             </li>
             <li class="nav-item">
-              <a class="nav-link active m-lg-4" aria-current="page" href="#"> ¿Quiénes somos? </a>
+              <a class="nav-link active m-lg-4" aria-current="page" href="index.php?pagina=sobreNosotros"> ¿Quiénes somos? </a>
             </li>
             <li>
                 <a href="index.php?pagina=home">
