@@ -19,12 +19,20 @@
     filter: blur(1px); /* Ajusta el valor (5px) para incrementar o disminuir el desenfoque */
   }
 
-  .card-title {
+  .about.card-title {
     display: inline-block;
     overflow: hidden; /* Ensures the text is not visible initially */
     white-space: nowrap; /* Keeps the text in a single line */
     border-right: 0.15em solid orange; /* Cursor effect */
-    animation: typing 1s steps(40, end) forwards, blink-caret 0.75s step-end 2;
+    animation: typing-about 1s steps(40, end) forwards, blink-caret 0.75s step-end 2;
+  }
+
+  .contacto.card-title {
+    display: inline-block;
+    overflow: hidden; /* Ensures the text is not visible initially */
+    white-space: nowrap; /* Keeps the text in a single line */
+    border-right: 0.15em solid orange; /* Cursor effect */
+    animation: typing-contacto 1s steps(40, end) forwards, blink-caret 0.75s step-end 2;
   }
 
   .card-title.typing-finished {
@@ -35,7 +43,12 @@
     animation: typing 2s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
   }
 
-  @keyframes typing {
+  @keyframes typing-contacto {
+    from { width: 0; }
+    to { width: 35%; }
+  }
+
+  @keyframes typing-about {
     from { width: 0; }
     to { width: 55%; }
   }
