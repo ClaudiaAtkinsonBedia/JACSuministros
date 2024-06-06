@@ -44,11 +44,11 @@ require_once 'CONTROLADOR/BarraSubcategoriasControl.php';
     <!-- BARRA DE NAVEGACIÓN -->
 
     <nav class="barraNavegacion navbar navbar-expand-lg text-white">
-      <div class="container-fluid g-0">
+      <div class="container-fluid container-md">
 
         <!-- Botón menú cuando colapsa (hamburguesa) -->
 
-        <button class="navbar-toggler text-white ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <i class="bi bi-list"></i>
         </button>
         <div class="d-lg-none">
@@ -59,7 +59,7 @@ require_once 'CONTROLADOR/BarraSubcategoriasControl.php';
 
         <!-- Iconos CUENTA e IDIOMA versión móvil -->
 
-        <div class="d-lg-none me-3 text-center">
+        <div class="d-lg-none text-center">
           <div> <!-- Link idioma -->
             <a href="#"> ES </a> <!-- link idioma español-->
             |
@@ -75,7 +75,7 @@ require_once 'CONTROLADOR/BarraSubcategoriasControl.php';
           <ul class="navbar-nav mx-lg-auto align-items-lg-center">
             <li class="nav-item m-lg-4">
               <a class="nav-link" href="#" role="button" aria-expanded="false">
-                <span class="botonCategorias ms-4 text-white"> Categorías <i class="bi bi-chevron-down"></i> </span>
+                <span class="botonCategorias text-white"> Categorías <i class="bi bi-chevron-down"></i> </span>
               </a>
             </li>
             <li class="nav-item d-lg-none">
@@ -131,7 +131,7 @@ require_once 'CONTROLADOR/BarraSubcategoriasControl.php';
 
             </li>
             <li class="nav-item">
-              <a class="nav-link active m-lg-4 ms-4 text-white" aria-current="page" href="index.php?pagina=sobreNosotros"> ¿Quiénes somos? </a>
+              <a class="nav-link active m-lg-4 text-white" aria-current="page" href="index.php?pagina=sobreNosotros"> ¿Quiénes somos? </a>
             </li>
             <li>
               <a href="index.php?pagina=home">
@@ -140,10 +140,10 @@ require_once 'CONTROLADOR/BarraSubcategoriasControl.php';
 
             </li>
             <li class="nav-item">
-              <a class="nav-link m-lg-4 ms-4 text-white" href="index.php?pagina=contacto"> Contacto </a>
+              <a class="nav-link m-lg-4 text-white" href="index.php?pagina=contacto"> Contacto </a>
             </li>
             <li class="nav-item m-lg-4">
-              <a class="nav-link ms-4 text-white" href="#"> Blog </a>
+              <a class="nav-link text-white" href="#"> Blog </a>
             </li>
           </ul>
 
