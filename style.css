@@ -11,3 +11,11 @@
     display: none;
     /* La barra está oculta por defecto */
 }
+
+.barraNavegacion {
+    background-color: #1c0c4f;
+}
+
+.prueba {
+    background-color: #444444;
+}

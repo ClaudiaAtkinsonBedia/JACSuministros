@@ -13,7 +13,7 @@
 
 </head>
 
-<body>
+<body class="prueba">
 
   <!-- HEADER -->
 
@@ -21,8 +21,10 @@
 
     <!-- BARRA SUPERIOR -->
 
+    <div class="container-fluid bg-body-secondary">
+      
     <div class="container">
-      <div class="row">
+      <div class="row py-2">
         <div class="col-6"> <!-- Icono + link -->
           <a href="mailto:info@jacsuministros.es"> <!-- link email -->
             <i class="bi bi-envelope-fill"></i> <!-- Icono -->
@@ -36,9 +38,11 @@
       </div>
     </div>
 
+    </div>
+
     <!-- BARRA DE NAVEGACIÓN -->
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="barraNavegacion navbar navbar-expand-lg text-white">
       <div class="container">
 
         <!-- Botón menú cuando colapsa (hamburguesa) -->
@@ -47,9 +51,11 @@
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <i class="bi bi-list"></i>
         </button>
-        <div class="col d-lg-none">
-          <img class="mx-auto d-flex d-block d-lg-none text-center" src="img/logo.png" alt="Bootstrap" width="80"
-            height="74"> <!-- Logo para la versión móvil -->
+        <div class="d-lg-none">
+          <a href="index.php?pagina=home">
+            <img class="mx-auto d-flex d-block d-lg-none text-center" src="img/logo.png" alt="Bootstrap" width="80"
+              height="74"> <!-- Logo para la versión móvil -->
+          </a>
         </div>
 
         <!-- Iconos CUENTA e IDIOMA versión móvil -->
@@ -69,22 +75,77 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav mx-lg-auto align-items-lg-center">
             <li class="nav-item m-lg-4">
-              <a class="nav-link" href="#"role="button" aria-expanded="false">
-                <span class="botonCategorias"> Categorías <i class="bi bi-chevron-down"></i> </span>
+              <a class="nav-link" href="#" role="button" aria-expanded="false">
+                <span class="botonCategorias text-white"> Categorías <i class="bi bi-chevron-down"></i> </span>
               </a>
             </li>
+            <li class="nav-item d-lg-none">
+
+              <!-- Barra de categorías para móvil -->
+
+              <!-- Barra de categorías -->
+
+              <div class="container">
+                <div class="row">
+                  <div class="barraCategorias g-0">
+                    <nav class="navbar navbar-expand navbar-light bg-primary d-flex justify-content-center">
+                      <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                          <a class="opcion1 nav-link opcionCategoria" href="#"> Categoría 1 </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="opcion2 nav-link opcionCategoria" href="#"> Categoría 2 </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="opcion3 nav-link opcionCategoria" href="#"> Categoría 3 </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+
+                <!-- Barra de subcategorías -->
+
+                <div class="row">
+                  <div class="barraSubcategorias g-0">
+                    <nav class="navbar navbar-expand navbar-light bg-warning d-flex justify-content-center">
+                      <ul class="listaSubcategorias nav navbar-nav">
+                        <!-- <li class="nav-item">
+                <a class="nav-link" href="#"> Subcategoría 1 </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Subcategoría 2 </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Subcategoría 3 </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Subcategoría 4 </a>
+              </li> -->
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+
+                <!-- Fin de barra de categorías para móvil -->
+
+            </li>
             <li class="nav-item">
-              <a class="nav-link active m-lg-4" aria-current="page" href="#"> ¿Quiénes somos? </a>
+              <a class="nav-link active m-lg-4 text-white" aria-current="page" href="index.php?pagina=sobreNosotros"> ¿Quiénes
+                somos? </a>
             </li>
             <li>
-              <img class="d-flex d-none d-lg-block" src="img/logo.png" alt="Bootstrap" width="80" height="74">
-              <!-- Logo para la versión escritorio -->
+              <a href="index.php?pagina=home">
+                <img class="d-flex d-none d-lg-block" src="img/logo.png" alt="Bootstrap" width="80" height="74">
+                <!-- Logo para la versión escritorio -->
+              </a>
+
             </li>
             <li class="nav-item">
-              <a class="nav-link m-lg-4" href="Contacto.html"> Contacto </a>
+              <a class="nav-link m-lg-4 text-white" href="index.php?pagina=contacto"> Contacto </a>
             </li>
             <li class="nav-item m-lg-4">
-              <a class="nav-link" href="#"> Blog </a>
+              <a class="nav-link text-white" href="#"> Blog </a>
             </li>
           </ul>
 
@@ -107,24 +168,24 @@
       </div>
     </nav>
 
-    <!-- Barra de categorías -->
+    <!-- Barra de categorías para escritorio -->
 
-    <div class="container">
+    <div class="container d-none d-lg-block">
       <div class="row">
         <div class="barraCategorias g-0">
           <nav class="navbar navbar-expand navbar-light bg-primary d-flex justify-content-center">
-          <ul class="nav navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link opcionCategoria" href="#"> Categoría 1 </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link opcionCategoria" href="#"> Categoría 2 </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link opcionCategoria" href="#"> Categoría 3 </a>
-            </li>
-          </ul>
-        </nav>
+            <ul class="nav navbar-nav">
+              <li class="nav-item">
+                <a class="opcion1 nav-link opcionCategoria" href=""> Categoría 1 </a>
+              </li>
+              <li class="nav-item">
+                <a class="opcion2 nav-link opcionCategoria" href="#"> Categoría 2 </a>
+              </li>
+              <li class="nav-item">
+                <a class="opcion3 nav-link opcionCategoria" href="#"> Categoría 3 </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
 
@@ -133,11 +194,9 @@
       <div class="row">
         <div class="barraSubcategorias g-0">
           <nav class="navbar navbar-expand navbar-light bg-warning d-flex justify-content-center">
-            <ul class="nav navbar-nav">
-              <li class="nav-item">
-                <li class="nav-item">
+            <ul class="listaSubcategorias nav navbar-nav">
+              <!-- <li class="nav-item">
                   <a class="nav-link" href="#"> Subcategoría 1 </a>
-                </li>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#"> Subcategoría 2 </a>
@@ -147,95 +206,260 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#"> Subcategoría 4 </a>
-              </li>
+              </li> -->
+
             </ul>
           </nav>
         </div>
       </div>
-    
-    <!-- Fin de barra de categorías -->
+
+      <!-- Fin de barra de categorías para escritorio -->
 
   </header>
+  <!-- MIGAS DE PAN -->
 
- <!-- MAIN -->
-  
- <main>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h3 class="mt-5 text-center"> Formulario de contacto </h3>
-        <p class="my-5 text-center">
-          ¿Tiene alguna duda? ¿No encuentra lo que está buscando? <br>
-          Si desea realizar cualquier consulta, rellene el siguiente formulario de contacto y le responderemos lo
-          antes posible.
-        </p>
+  <!-- Aquí irían las migas de pan, pero en el home no hay. -->
+
+  <!-- MAIN -->
+  <main>
+
+
+
+    <div class="container mb-5">
+
+      <div class="row text-center mt-5">
+
+        <div class="col-4">
+          <a href="index.php?pagina=categoria1">
+            <img class="rounded-circle" src="img/Categoria1.jpg" alt="Categoría 1" width="140" height="140">
+          </a>
+          <h2 class="fw-normal text-white"> Categoría 1 </h2>
+        </div>
+
+        <div class="col-4">
+          <a href="">
+            <img class="rounded-circle" src="img/Categoria2.webp" alt="Categoría 2" width="140" height="140">
+          </a>
+          <h2 class="fw-normal text-white"> Categoría 2 </h2>
+        </div>
+
+        <div class="col-4">
+          <a href="">
+            <img class="rounded-circle" src="img/Categoria3.webp" alt="Categoría 3" width="140" height="140">
+          </a>
+          <h2 class="fw-normal text-white"> Categoría 3 </h2>
+        </div>
+
       </div>
 
-      <!-- FORMULARIO DE CONTACTO -->
-      
-      <form id="formContacto" action="#" method="post" novalidate>
-        
-        <!-- Nombre (obligatorio) -->
+      <div class="row mt-4 ms-3 text-white">
+        <p> <!-- Texto llamativo -->
+          J.A.C SUMINISTROS INDUSTRIALES S.L., empresa fundada en 2002, formada por un grupo de profesionales con más de
+          40
+          años de experiencia en el sector,
+          por ello tratamos de crecer cada día y así mejorar nuestra relación con nuestros clientes, elemento
+          fundamental
+          para su mayor satisfacción.
 
-        <div class="col-10 col-lg-6 mb-3 mx-auto">
-          <label for="name" class="form-label"> Nombre completo: </label>
-          <input type="text" class="form-control" id="name" name="name" aria-describedby="nameHelp"
-            placeholder="Ejemplo: Ariadna Peña López">
-          <div id="nameErrores" class="form-text"> Obligatorio </div>
+          Esperamos aquí poder ayudarles en lo posible, estando siempre a su disposición en nuestra zona de contacto.
+        </p>
+      </div>
+      <div class="row justify-content-lg-end justify-content-center">
+        <div class="col-auto me-lg-5">
+          <a class="btn btn-warning" href="tel:921413272" role="button"> Llámanos </a>
+          <!-- Botón - Llamada a la acción -->
         </div>
-
-        <!-- Dirección -->
-
-        <div class="col-10 col-lg-6 mb-3 mx-auto">
-          <label for="direccion" class="form-label"> Dirección: </label>
-          <input type="text" class="form-control" id="direccion" name="direccion" aria-describedby="direccionHelp"
-            placeholder="Ejemplo: C/ La Almadraba 5, 3ºA Segovia 40005">
-          <div id="direccionErrores" class="form-text"> </div>
-        </div>
-
-        <!-- Correo electrónico (obligatorio) -->
-
-        <div class="col-10 col-lg-6 mb-3 mx-auto">
-          <label for="email" class="form-label"> Correo electrónico: </label>
-          <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
-            placeholder="Ejemplo: correo@correo.com">
-          <div id="emailErrores" class="form-text"> Obligatorio </div>
-        </div>
-
-        <!-- Teléfono (obligatorio) -->
-        
-        <div class="col-10 col-lg-6 mb-3 mx-auto">
-          <label for="telefono" class="form-label"> Teléfono: </label>
-          <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Ejemplo: 987654321">
-          <div id="telefonoErrores" class="form-text"> Obligatorio </div>
-        </div>
-        
-        <!-- Su mensaje (obligatorio) -->
-        
-        <div class="col-10 col-lg-6 mb-3 mx-auto">
-          <label for="mensaje" class="form-label"> Su mensaje: </label>
-          <input type="textarea" class="form-control" id="mensaje" name="mensaje" aria-describedby="mensajeHelp"
-            placeholder="Ejemplo: Les escribo para preguntarles...">
-          <div id="mensajeErrores" class="form-text"> Obligatorio </div>
-        </div>
-
-        <div class="col-10 col-lg-6 d-flex mx-auto justify-content-center justify-content-lg-end mt-4 mb-5">
-          <button id="submitButton" type="submit" class="btn btn-warning"> Enviar formulario </button>
-        </div>
-      </form>
-
+      </div>
     </div>
-  </div>
-</main>
 
+  </main><!-- FOOTER -->
+
+  <footer>
+
+    <!-- ELEMENTOS EXTERNOS AL FOOTER -->
+
+    <div class="container">
+      <div class="row">
+        <h2 class="text-center text-white" id="ubicacion"> ¿Dónde estamos? </h2>
+        <p class="mb-3 text-center text-white"> Desde aquí puedes navegar hacia nuestra tienda de Segovia </p>
+
+        <!-- Mapa -->
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1792.054395361165!2d-4.113613923160526!3d40.940642616898266!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd413ee22c58cc2b%3A0x2fb2a28d8e2c4a9a!2sJ.A.C%20SUMINISTROS%20INDUSTRIALES%20S.L.!5e0!3m2!1ses!2ses!4v1713517132231!5m2!1ses!2ses"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <!-- Barra de Kit Digital -->
+
+        <img src="img/kit_digital.png" width="width" height="height" alt="Logotipos del Kit Digital" />
+      </div>
+    </div>
+
+    <!-- ELEMENTOS INTERNOS AL FOOTER -->
+
+    <!-- Versión escritorio / tablet -->
+
+    <!-- Mapa del sitio versión escritorio / tablet -->
+
+    <div class="container d-none d-lg-block">
+      <div class="row">
+        <div class="col">
+          <h6 class="text-center"> MAPA DEL SITIO </h6>
+          <ul class="pt-3">
+            <li>
+              <a href="index.php?pagina=home"> Home </a>
+            </li>
+            <li>
+              <a href="index.php?pagina=sobreNosotros"> ¿Quiénes somos? </a>
+            </li>
+            <li> Categorías </li>
+            <li>
+              <a href="index.php?pagina=contacto"> Contacto </a>
+            </li>
+            <li> Blog </li>
+            <li> Tu cuenta </li>
+          </ul>
+        </div>
+
+        <!-- Aviso legal versión escritorio / tablet -->
+
+        <div class="col ps-5 border border-bottom-0 border-end-0 border-top-0 border-dark">
+          <h6 class="text-center"> INFORMACIÓN </h6>
+          <ul class="pt-3">
+            <li>
+              <a href="index.php?pagina=avisoLegal"> Aviso Legal </a>
+            </li>
+            <li>
+              <a href="index.php?pagina=cookies"> Política de Cookies </a>
+            </li>
+            <li>
+              <a href="index.php?pagina=politicaPrivacidad"> Política de Privacidad </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contacto versión escritorio / tablet -->
+
+        <div class="col ps-5 border border-bottom-0 border-end-0 border-top-0 border-dark">
+          <h6 class="text-center"> CONTACTO </h6>
+          <ul class="pt-3">
+            <li>
+              Dirección:
+              <a href="#ubicacion">
+                J.A.C. Suministros Industriales S.L.
+                Avda de la Constitucion 11
+                40005 Segovia
+              </a>
+            </li>
+            <li>
+              Teléfono:
+              <a href="tel:921413272"> 921 413 272 </a>
+            </li>
+            <li>
+              Fax:
+              921 413 271
+            </li>
+            <li>
+              Correo:
+              <a href="mailto:info@jacsuministros.es"> info@jacsuministros.es </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <!-- Fin versión escritorio / tablet -->
+
+    <!-- Versión móvil -->
+
+    <!-- Mapa del sitio versión móvil -->
+
+    <div class="container d-lg-none">
+      <div class="row">
+        <div
+          class="col-12 pt-3 d-flex flex-column align-items-center border border-start-0 border-end-0 border-top-0 border-dark">
+          <h6> MAPA DEL SITIO </h6>
+          <ul class="d-flex flex-column">
+            <li>
+              <a href="index.php?pagina=home"> Home </a>
+            </li>
+            <li>
+              <a href="index.php?pagina=sobreNosotros"> ¿Quiénes somos? </a>
+            </li>
+            <li> Categorías </li>
+            <li>
+              <a href="index.php?pagina=contacto"> Contacto </a>
+            </li>
+            <li> Blog </li>
+            <li> Tu cuenta </li>
+          </ul>
+        </div>
+
+        <!-- Aviso legal versión móvil -->
+
+        <div
+          class="col-12 pt-3 d-flex flex-column align-items-center border border-start-0 border-end-0 border-top-0 border-dark">
+          <h6> INFORMACIÓN </h6>
+          <ul class="d-flex flex-column">
+            <li>
+              <a href="index.php?pagina=avisoLegal"> Aviso Legal </a>
+            </li>
+            <li>
+              <a href="index.php?pagina=cookies"> Política de Cookies </a>
+            </li>
+            <li>
+              <a href="index.php?pagina=politicaPrivacidad"> Política de Privacidad </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contacto versión móvil -->
+
+        <div
+          class="col-12 pt-3 d-flex flex-column align-items-center border border-bottom-0 border-start-0 border-end-0 border-top-0 border-dark">
+          <h6> CONTACTO </h6>
+          <ul class="d-flex flex-column ms-5 ps-5">
+            <li>
+              Dirección: <br>
+              <a href="#ubicacion">
+                J.A.C. Suministros Industriales S.L. <br>
+                Avda de la Constitucion 11 <br>
+                40005 Segovia
+              </a>
+            </li>
+            <li>
+              Teléfono:
+              <a href="tel:921413272"> 921 413 272 </a>
+            </li>
+            <li>
+              Fax:
+              921 413 271
+            </li>
+            <li>
+              Correo:
+              <a href="mailto:info@jacsuministros.es"> info@jacsuministros.es </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <!-- Fin versión móvil -->
 
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <script src="barraNavegacion.js"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> <!-- Llamada Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script> <!-- Llamada JQuery -->
+  <!--<script src="VISTA/js/barraNavegacion.js"></script>
+<script src="VISTA/js/validacionesFormulario.js"></script>-->
+  <script src="VISTA/js/functions.js"></script>
+  <script src="VISTA/js/animaciones.js"></script>
+
+
 </body>
 
 </html>
