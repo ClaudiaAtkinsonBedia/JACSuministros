@@ -25,8 +25,9 @@
 
     <!-- BARRA SUPERIOR -->
 
-    <div class="container">
-      <div class="row">
+    <div class="container-fluid bg-body-secondary">
+      <div class="container">
+      <div class="row py-2">
         <div class="col-6"> <!-- Icono + link -->
           <a href="mailto:info@jacsuministros.es"> <!-- link email -->
             <i class="bi bi-envelope-fill"></i> <!-- Icono -->
@@ -38,11 +39,12 @@
             921 41 32 72 </a>
         </div>
       </div>
+      </div>
     </div>
 
     <!-- BARRA DE NAVEGACIÓN -->
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="barraNavegacion navbar navbar-expand-lg text-white">
       <div class="container">
 
         <!-- Botón menú cuando colapsa (hamburguesa) -->
@@ -68,14 +70,14 @@
           <div> <!-- Entrar en cuenta y cambiar idioma -->
             <a href="#"> Tu cuenta </a> <!-- Icono -->
           </div>
-        </div>
+        </div> 
         <!-- Fin Iconos CUENTA e IDIOMA versión móvil -->
 
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav mx-lg-auto align-items-lg-center">
             <li class="nav-item m-lg-4">
               <a class="nav-link" href="#"role="button" aria-expanded="false">
-                <span class="botonCategorias"> Categorías <i class="bi bi-chevron-down"></i> </span>
+                <span class="botonCategorias text-white"> Categorías <i class="bi bi-chevron-down"></i> </span>
               </a>
             </li>
             <li class="nav-item d-lg-none">
@@ -130,19 +132,19 @@
 
             </li>
             <li class="nav-item">
-              <a class="nav-link active m-lg-4" aria-current="page" href="index.php?pagina=sobreNosotros"> ¿Quiénes somos? </a>
+              <a class="nav-link active m-lg-4 text-white" aria-current="page" href="index.php?pagina=sobreNosotros"> ¿Quiénes somos? </a>
             </li>
             <li>
                 <a href="index.php?pagina=home">
-                    <img class="d-flex d-none d-lg-block" src="VISTA/img/logo.png" alt="Bootstrap" width="80" height="74">   <!-- Logo para la versión escritorio -->
+                    <img class="d-flex d-none d-lg-block my-2" src="VISTA/img/logo.png" alt="Bootstrap" width="80" height="74">   <!-- Logo para la versión escritorio -->
                 </a>
             
             </li>
             <li class="nav-item">
-              <a class="nav-link m-lg-4" href="index.php?pagina=contacto"> Contacto </a>
+              <a class="nav-link m-lg-4 text-white" href="index.php?pagina=contacto"> Contacto </a>
             </li>
             <li class="nav-item m-lg-4">
-              <a class="nav-link" href="#"> Blog </a>
+              <a class="nav-link text-white" href="#"> Blog </a>
             </li>
           </ul>
 

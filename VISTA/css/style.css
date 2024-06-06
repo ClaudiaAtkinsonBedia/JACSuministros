@@ -12,12 +12,21 @@
     /* La barra está oculta por defecto */
 }
 
+.barraNavegacion {
+  background-color: #1c0c4f;
+}
+
 
 /* Efecto de desenfoque */
 
 .blur {
     filter: blur(1px); /* Ajusta el valor (5px) para incrementar o disminuir el desenfoque */
   }
+
+
+/* --------- ANIMACIONES ------------*/
+
+/* Efecto de escritura */
 
   .about.card-title {
     display: inline-block;
@@ -58,3 +67,5 @@
     50% { border-color: orange; }
     100% { border-color: orange; }
   }
+
+  /* Fin efecto escritura */
