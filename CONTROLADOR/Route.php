@@ -1,5 +1,7 @@
 <?php
 
+// Se encarga de enrutar el documento. Es llamado al entrar desde el index y abre el home por defecto. A partir de ahí enruta según las variables.
+
 require_once 'CONTROLADOR/BarraSubcategoriasControl.php' ;
 
 $ruta = $_SERVER['REQUEST_URI'];

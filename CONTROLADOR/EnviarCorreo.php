@@ -1,8 +1,21 @@
 <?php
 
+/* CÓMO FUNCIONA:
+
+    Este código está sacado de la documentación de PHP Mailer. Existe un plantilla que hemos adaptado para este proyecto.
+    
+    Los datos importantes son la dirección de SMTP, el puerto y demás. En resumen, hay que indicar las credenciales del correo que va a utiilzarse.
+    Para las pruebas hemos utilizado un correo de Hotmail para el que hemos requerido una contraseña de aplicación (esto se hace desde la configuración de Hotmail).
+    El funcionamiento está pensado para el formulario de contacto. Quien rellene los datos los enviará a la dirección aquí configurada, por lo que la dirección del remitente
+    no tiene que configurarse aquí. Es como enviarse un correo a uno mismo con los datos recogidos en el formulario (por eso la dirección aparecerá dos veces).
+
+    Hemos agregado, para mayor claridad, el manejo del cuerpo del mansaje. Esa parte no formar parte de la plantilla.
+*/
+
+
 // ini_set('SMTP', 'smtp.office365.com');  // Reemplaza con tu servidor SMTP
 // ini_set('smtp_port', 587);          // Utiliza el puerto correcto
-// ini_set('sendmail_from', 'adrianarjonabravo.hotmail.es') ;
+// ini_set('sendmail_from', '-----.hotmail.es') ;
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -36,14 +49,14 @@ if ($metodo === 'POST') {
         $mail->isSMTP();                                            //Send using SMTP
         $mail->Host       = 'smtp.office365.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'adrianarjonabravo@hotmail.es';                     //SMTP username
-        $mail->Password   = 'jpzkcrirdjjxtdfi';                               //SMTP password
+        $mail->Username   = 'correoQueVaARecibir(JAC)@JACSuministros.com';                     //SMTP username
+        $mail->Password   = 'insertaContraseña';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
         $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
         //Recipients
-        $mail->setFrom('adrianarjonabravo@hotmail.es', html_entity_decode($nombre, ENT_QUOTES, 'UTF-8'));
-        $mail->addAddress('adrianarjonabravo@hotmail.es', 'JAC Suministros');     //Add a recipient
+        $mail->setFrom('correoQueVaARecibir(JAC)@JACSuministros.com', html_entity_decode($nombre, ENT_QUOTES, 'UTF-8'));
+        $mail->addAddress('correoQueVaARecibir(JAC)@JACSuministros.com', 'JAC Suministros');     //Add a recipient
         // $mail->addAddress('ellen@example.com');               //Name is optional
         $mail->addReplyTo($email, html_entity_decode($nombre, ENT_QUOTES, 'UTF-8'));
         // $mail->addCC('cc@example.com');
@@ -53,6 +66,16 @@ if ($metodo === 'POST') {
         // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
         // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
 
+
+        /**
+         * Método que genera el HTML del mensaje.
+         * 
+         * @param string $nombre Nombre del usuario
+         * @param string $direccion Dirección del usuario
+         * @param string $email Email del usuario
+         * @param string $telefono Teléfono del usuario
+         * @param string $mensaje Cuerpo del mensaje
+         */
         function mensajeHTML($nombre, $direccion, $email, $telefono, $mensaje) {
             
             $html = '
@@ -132,7 +155,7 @@ if ($metodo === 'POST') {
         header('Location: ../index.php?pagina=contacto&enviado=false');
     }
 
-    //     $destinatario = 'adrian.arjona@abacodev.com';
+    //     $destinatario = 'abacodev@abacodev.com';
     //     $asunto = 'Nuevo mensaje de contacto de ' . $nombre ;
     //     $cuerpo = "Nombre: $nombre\n";
     //     $cuerpo .= "Dirección: $direccion\n";
