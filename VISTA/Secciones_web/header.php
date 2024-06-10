@@ -40,6 +40,7 @@ require_once 'CONTROLADOR/BarraSubcategoriasControl.php';
         </div>
       </div>
     </div>
+    
 
     <!-- BARRA DE NAVEGACIÓN -->
 

@@ -2,6 +2,8 @@
 
 require_once 'VISTA/Secciones_web/header.php' ;
 
+// Página que muestra el formulario de contacto
+
 /* ENRUTAMIENTO DEL MAIN (FORMULARIO) 
 ------------------------------------------
 
